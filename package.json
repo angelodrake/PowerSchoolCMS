@@ -19,7 +19,14 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "express": "^4.16.3",
-    "if-env": "^1.0.4"
-  }
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.3.11",
+    "morgan": "^1.9.1",
+    "react-router-dom": "^4.3.1"
+  },
+  "proxy": "http://localhost:3001"
 }
