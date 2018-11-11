@@ -4,8 +4,8 @@ var autoIncrement = require('mongoose-auto-increment');
 // Save a reference to the Schema constructor
 var Schema = mongoose.Schema;
 
-// Using the Schema constructor, create a new StudentSchema object
-var StudentSchema = new Schema({
+// Using the Schema constructor, create a new UserSchema object
+var UserSchema = new Schema({
   email: {
     type: String,
     unique: true,
@@ -39,10 +39,10 @@ var StudentSchema = new Schema({
 
 //auto increment
 autoIncrement.initialize(mongoose.connection);
-StudentSchema.plugin(autoIncrement.plugin, 'Student');
+UserSchema.plugin(autoIncrement.plugin, 'User');
 
 // This creates our model from the above schema, using mongoose's model method
-var Student = mongoose.model("Student", StudentSchema);
+var User = mongoose.model("User", UserSchema);
 
-// Export the Student model
-module.exports = Student;
+// Export the User model
+module.exports = User;
