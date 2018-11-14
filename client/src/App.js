@@ -22,6 +22,7 @@ class App extends Component {
 
   componentDidMount() {
     this.getUser();
+    console.log();
   }
 
   updateUser(userObject) {
@@ -56,7 +57,7 @@ class App extends Component {
         {/* greet user if logged in: */}
         {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>}
         {/* Routes to different components */}
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Home} loggedIn={this.state.loggedIn} />
         <Route path="/login" render={() => <LoginForm updateUser={this.updateUser} />} />
         <Route path="/signup" render={() => <Signup />} />
       </div>
