@@ -12,7 +12,8 @@ class App extends Component {
     super();
     this.state = {
       loggedIn: false,
-      username: null
+      username: null,
+      isLoading: true
     };
 
     this.getUser = this.getUser.bind(this);
@@ -22,12 +23,12 @@ class App extends Component {
 
   componentDidMount() {
     this.getUser();
+    console.log(this.state.loggedIn);
   }
 
   updateUser(userObject) {
     this.setState(userObject);
   }
-
   getUser() {
     axios.get("/user/").then(response => {
       console.log("Get user response: ");
@@ -37,26 +38,33 @@ class App extends Component {
 
         this.setState({
           loggedIn: true,
-          username: response.data.user.username
+          username: response.data.user.username,
+          isLoading: false
         });
       } else {
         console.log("Get user: no user");
         this.setState({
           loggedIn: false,
-          username: null
+          username: null,
+          isLoading: false
         });
       }
     });
   }
 
   render() {
-    return (
+    return this.state.isLoading ? (
+      <div>
+        <h2>LOADING PAGE</h2>
+      </div>
+    ) : (
       <div className="App">
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>}
         {/* Routes to different components */}
-        <Route exact path="/" component={Home} />
+
+        <Route exact path="/" render={() => <Home loggedIn={this.state.loggedIn} />} />
         <Route path="/login" render={() => <LoginForm updateUser={this.updateUser} />} />
         <Route path="/signup" render={() => <Signup />} />
       </div>

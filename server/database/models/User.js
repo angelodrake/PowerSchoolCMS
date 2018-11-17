@@ -10,7 +10,7 @@ const userSchema = new Schema({
   password: { type: String, unique: false, required: false },
   name: {
     type: String,
-    required: "Name is Required"
+    required: false
   },
   gradebook: [
     {
