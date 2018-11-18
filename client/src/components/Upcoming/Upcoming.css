@@ -1,0 +1,67 @@
+.upcomingBuffer {
+  margin-top: 6rem;
+  margin-left: 4rem;
+  margin-right: 14rem;
+}
+
+.upcomingHeader {
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+.sessionBorder {
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px #ccc;
+}
+
+.break {
+  border-bottom: solid 1px #ccc;
+  margin: 1.5rem 1rem 1.5rem 1rem;
+}
+
+.day {
+  font-size: 20px;
+}
+
+.month {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dayNum {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 20px;
+}
+
+.testName {
+  font-size: 24px;
+  font-weight: 550;
+  margin-left: .5rem;
+}
+
+.details {
+  font-size: 20px;
+  font-weight: 550;
+  margin-left: .5rem;
+}
+
+.absence {
+  font-size: 20px;
+  font-weight: 550;
+  margin-left: .5rem;
+}
+
+.checkin {
+  font-size: 20px;
+  font-weight: 550;
+  margin-left: .5rem;
+}
+
+.innerBuffer {
+  margin: 2rem 1rem 2rem 1rem;
+}

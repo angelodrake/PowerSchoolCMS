@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import axios from "axios";
 
 class LoginForm extends Component {
@@ -93,6 +93,9 @@ class LoginForm extends Component {
               <button className="btn btn-primary col-1 col-mr-auto" onClick={this.handleSubmit} type="submit">
                 Login
               </button>
+              <Link to="/signup" className="btn btn-link">
+                <span className="text-secondary">sign up</span>
+              </Link>
             </div>
           </form>
         </div>
