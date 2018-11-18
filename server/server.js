@@ -10,7 +10,6 @@ const passport = require("./passport");
 const app = express();
 const user = require("./routes/user");
 
-// Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
@@ -26,16 +25,16 @@ app.use(bodyParser.json());
 // Sessions
 app.use(
   session({
-    secret: "Kavita-Drake", //pick a random string to make the hash that is generated secure
+    secret: "Kavita-Drake",
     store: new MongoStore({ mongooseConnection: dbConnection }),
-    resave: false, //required
-    saveUninitialized: false //required
+    resave: false,
+    saveUninitialized: false
   })
 );
 
 // Passport
 app.use(passport.initialize());
-app.use(passport.session()); // calls the deserializeUser
+app.use(passport.session()); //Checks user session in local strat
 
 // Routes
 app.use("/user", user);
