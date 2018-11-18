@@ -1,0 +1,30 @@
+aside {
+  width: 14rem;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+}
+
+.school-logo {
+  width: 50%;
+}
+
+.student-name-tag {
+  margin: 0px;
+}
+
+.student-id {
+  margin-bottom: 20px;
+}
+
+.side-link-text {
+  padding-left: 30px;
+  display: inline;
+}
+
+.mx-3 {
+  position: absolute;
+}
