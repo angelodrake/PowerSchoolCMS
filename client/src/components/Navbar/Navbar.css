@@ -1,0 +1,39 @@
+.rightBuffer {
+  margin-right: 3rem;
+}
+
+.leftBuffer {
+  margin-left: 3rem;
+}
+
+.iconFormat {
+  font-size: 22px;
+  border: none;
+  margin-top: .4rem;
+  background: rgb(3, 33, 91);
+  color: #fff;
+}
+
+.iconFormat:hover {
+  background: rgb(3, 33, 91);
+  color: #3273dc;
+}
+
+.iconFormat:focus {
+  color: #fff;
+}
+
+.navTextFormat {
+  font-size: 24px;
+  color: #fff;
+}
+
+.navItemSpacing {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.navStyles {
+  background: rgb(3, 33, 91);
+  box-shadow: 1px 1px 6px;
+}

@@ -1,0 +1,33 @@
+.notificationsBuffer {
+  margin-top: 3rem;
+  margin-left: 16rem;
+}
+
+.notificationsHeader {
+  font-size: 28px;
+}
+
+.colBorder {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: solid 1px #ccc;
+  box-shadow: 1px 1px 2px #ccc;
+  border-radius: 4px;
+}
+
+.atnText {
+  display: inline-block;
+  font-size: 18px;
+  margin: 1rem 3rem .5rem 3rem;
+}
+
+.notifDetails {
+  font-size: 20px;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+.boldSpan {
+  font-weight: bold;
+}
