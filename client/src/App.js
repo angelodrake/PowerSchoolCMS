@@ -6,6 +6,8 @@ import Signup from "./components/sign-up";
 import LoginForm from "./components/login-form";
 import Navbar from "./components/navbar";
 import Home from "./components/home";
+import SideBar from "./components/SideBar";
+import Footer from "./components/Footer";
 
 class App extends Component {
   constructor() {
@@ -54,8 +56,8 @@ class App extends Component {
 
   render() {
     return this.state.isLoading ? (
-      <div>
-        <h2>LOADING PAGE</h2>
+      <div className="has-text-centered">
+        <a href="" class="button is-loading is-white is-center is-large" />
       </div>
     ) : (
       <div className="App">
@@ -63,10 +65,18 @@ class App extends Component {
         {/* greet user if logged in: */}
         {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>}
         {/* Routes to different components */}
-
-        <Route exact path="/" render={() => <Home loggedIn={this.state.loggedIn} />} />
-        <Route path="/login" render={() => <LoginForm updateUser={this.updateUser} />} />
+        <SideBar loggedIn={this.state.loggedIn} />
+        <Route
+          exact
+          path="/"
+          render={() => <Home loggedIn={this.state.loggedIn} />}
+        />
+        <Route
+          path="/login"
+          render={() => <LoginForm updateUser={this.updateUser} />}
+        />
         <Route path="/signup" render={() => <Signup />} />
+        <Footer loggedIn={this.state.loggedIn} />
       </div>
     );
   }
