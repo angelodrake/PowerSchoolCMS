@@ -2,5 +2,6 @@
 
 module.exports = {
   Coursework: require("./Coursework"),
+  Form: require("./Form"),
   User: require("./User")
 };
