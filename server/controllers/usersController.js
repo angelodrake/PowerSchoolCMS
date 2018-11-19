@@ -40,22 +40,14 @@ module.exports = {
         };
         res.send(userInfo);
     },
-    findUser: function(req,res){
-            console.log("===== user!!======");
-            console.log(req.user);
-            if (req.user) {
-              User.findOne({ username: req.user.username })
-                .populate("gradebook")
-                .populate("form")
-                .then(function (dbStudent) {
-                  res.json(dbStudent);
-                })
-                .catch(function (err) {
-                  res.json(err);
-                });
-            } else {
-              res.json({ user: null });
-            }   
+    findUser: function (req, res) {
+        console.log("===== user!!======");
+        console.log(req.user);
+        if (req.user) {
+            res.json({ user: req.user })
+        } else {
+            res.json({ user: null });
+        }
     }
 
 }
