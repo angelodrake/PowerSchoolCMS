@@ -21,8 +21,8 @@ class SideBar extends Component {
               className="school-logo"
               src={require("./images/hopewell.png")}
             />
-            <h2 className="student-name-tag">John Smith</h2>
-            <h4 className="student-id">7508719</h4>
+            <h2 className="student-name-tag has-text-centered">John Smith</h2>
+            <h4 className="student-id has-text-centered">7508719</h4>
             <ul className="menu-list">
               <li>
                 <Link

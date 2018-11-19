@@ -1,0 +1,154 @@
+#events-list {
+  list-style-type: disc;
+}
+
+.calendar-page-holder {
+  height: 100%;
+  width: calc(100%-14rem);
+  margin-left: 14rem;
+  background: linear-gradient(
+    45deg,
+    rgb(3, 33, 83) 0%,
+    rgb(150, 192, 230) 100%
+  );
+  /* no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+  padding: 3% 0px;
+  min-height: 100vh;
+}
+
+.calendar {
+  width: 90%;
+  margin: 0 auto;
+}
+/* Month header */
+.month {
+  padding: 50px 25px;
+  width: 100%;
+  background: rgb(3, 33, 83);
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: rgb(3, 33, 83);
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: rgb(150, 192, 232);
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 25px;
+  color: rgb(3, 33, 83);
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  background: rgb(3, 33, 83);
+  color: white !important;
+}
+
+.non-month-days {
+  color: rgb(198, 216, 233);
+}
+
+.event-title {
+  font-size: 40px;
+  margin-bottom: 3%;
+}
+
+.calendar-columns {
+  width: 95%;
+}
+
+.viewing {
+  display: block;
+}
+
+.not-viewing {
+  display: none;
+}
+
+.days-events-card {
+  background-color: rgb(3, 33, 83);
+  color: white;
+}
+
+.card-header-title {
+  color: white;
+}
+
+.days-events-card-hr {
+  color: white;
+  margin: 0px 2%;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.days-events-card,
+.viewing {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 10px 10px 5px rgb(2, 17, 43);
+}
+
+.underlined:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.month-toggler:hover {
+  cursor: pointer;
+}
+
+.events-showing {
+  background-color: #ddd;
+}

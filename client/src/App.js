@@ -4,12 +4,13 @@ import { Route, Link } from "react-router-dom";
 // components
 import Signup from "./components/sign-up";
 import LoginForm from "./components/login-form";
-import Navbar from "./components/navbar";
-import Home from "./components/home";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/pages/home";
 import ContactCards from "./components/ContactCards";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import contacts from "./contacts.json";
+import Calendar from "./components/pages/Calendar";
 import "./App.css";
 
 class App extends Component {
@@ -81,6 +82,12 @@ class App extends Component {
           path="/contacts"
           render={() => <ContactCards loggedIn={this.state.loggedIn} />}
         />
+        <Route
+          exact
+          path="/calendar"
+          render={() => <Calendar loggedIn={this.state.loggedIn} />}
+        />
+
         <Route
           path="/login"
           render={() => <LoginForm updateUser={this.updateUser} />}

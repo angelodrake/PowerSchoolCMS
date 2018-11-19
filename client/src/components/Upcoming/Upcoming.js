@@ -1,53 +1,40 @@
-import React from 'react';
-import { Route, Link } from 'react-router-dom'
-import './Upcoming.css';
+import React from "react";
+import { Route, Link } from "react-router-dom";
+import "./Upcoming.css";
 
-const Upcoming = (props) => {
-
+const Upcoming = props => {
   return (
     <div className="upcomingBuffer">
-      <h2 className="upcomingHeader">
-        Upcoming Formals
-      </h2>
-      <div className='sessionBorder'>
+      <h2 className="upcomingHeader">Upcoming Formals</h2>
+      <div className="sessionBorder">
         <div className="innerBuffer">
           <div className="has-text-centered">
-            <p className="day">
-              {props.day}
-            </p>
-            <p className="month">
-              {props.month}
-            </p>
-            <p className="dayNum">
-              {props.dayNum}
-            </p>
-            <p className="time">
-              {props.time}
-            </p>
+            <p className="day">{props.day}</p>
+            <p className="month">{props.month}</p>
+            <p className="dayNum">{props.dayNum}</p>
+            <p className="time">{props.time}</p>
           </div>
-          <div className="break"></div>
+          <div className="break" />
           <div className="has-text-centered">
-            <p className="testName">
-              {props.testName}
-            </p>
+            <p className="testName">{props.testName}</p>
           </div>
-          <div className="break"></div>
+          <div className="break" />
           <div className="has-text-centered">
             <p>
               <Link to="/session-details" className="details">
-                <i className="fas fa-sign-in-alt"></i> Session Details
+                <i className="fas fa-sign-in-alt" /> Session Details
               </Link>
             </p>
             <p>
               <Link to="/absence-request" className="absence">
-                <i class="fas fa-calendar-times"></i> Request Absence
+                <i className="fas fa-calendar-times" /> Request Absence
               </Link>
             </p>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Upcoming;
