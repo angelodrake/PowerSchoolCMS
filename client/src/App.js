@@ -59,7 +59,7 @@ class App extends Component {
   render() {
     return this.state.isLoading ? (
       <div className="has-text-centered">
-        <a href="" class="button is-loading is-white is-center is-large" />
+        <a href="" className="button is-loading is-white is-center is-large" />
       </div>
     ) : (
       <div className="App">
