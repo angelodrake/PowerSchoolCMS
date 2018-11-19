@@ -4,8 +4,8 @@ const gradebookRoutes = require("./gradebook");
 const user = require("./user")
 
 // Book routes
-router.use("/form", formRoutes);
-router.use("/gradebook", gradebookRoutes);
+router.use("/api/form", formRoutes);
+router.use("/api/gradebook", gradebookRoutes);
 router.use("/", user)
 
 module.exports = router;

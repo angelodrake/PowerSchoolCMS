@@ -3,7 +3,6 @@ const router = express.Router();
 const passport = require("../passport");
 const formsController = require("../controllers/formsController");
 const usersController = require("../controllers/usersController");
-const User = require('../database/models/User')
 
 //==========================
 // USER AUTENTICATION SYSTEM
@@ -13,6 +12,9 @@ const User = require('../database/models/User')
 router.route("/")
   .post(usersController.signup)
   .get(usersController.findUser)
+
+router.route("/api/user/:id")
+  .get(usersController.user)
 
 const middleware1 = function (req, res, next) {
   console.log("routes/user.js, login, req.body: ");

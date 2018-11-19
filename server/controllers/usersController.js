@@ -48,6 +48,17 @@ module.exports = {
         } else {
             res.json({ user: null });
         }
+    },
+    user: function(req,res){
+        User.findOne({ _id: req.params.id })
+        .populate("gradebook")
+        .populate("form")
+        .then(function (dbUser) {
+          res.json(dbUser);
+        })
+        .catch(function (err) {
+          res.json(err);
+        });
     }
 
 }
