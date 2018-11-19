@@ -8,7 +8,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/pages/home";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
-import './App.css'
+import Chat from "./components/Chat/chat";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -64,20 +65,14 @@ class App extends Component {
       <div className="App">
         <div className="mainContent">
           <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-          <Route
-            exact
-            path="/"
-            render={() => <Home loggedIn={this.state.loggedIn} />}
-          />
+          <Route exact path="/" render={() => <Home loggedIn={this.state.loggedIn} />} />
         </div>
         <div className="sidebar">
           <SideBar loggedIn={this.state.loggedIn} />
         </div>
-        <Route
-          path="/login"
-          render={() => <LoginForm updateUser={this.updateUser} />}
-        />
+        <Route path="/login" render={() => <LoginForm updateUser={this.updateUser} />} />
         <Route path="/signup" render={() => <Signup />} />
+        <Route path="/chat" render={() => <Chat title="Chat App Screen" />} />
         <Footer loggedIn={this.state.loggedIn} />
       </div>
     );

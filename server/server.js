@@ -9,6 +9,12 @@ const MongoStore = require("connect-mongo")(session);
 const passport = require("./passport");
 const app = express();
 const user = require("./routes/user");
+const server = require("http").Server(app);
+
+let io = (module.exports.io = require("socket.io")(server));
+const SocketManager = require("./chat/SocketManager.js");
+
+io.on("connection", SocketManager);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -42,6 +48,6 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.listen(PORT, function() {
+server.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
