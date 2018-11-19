@@ -10,6 +10,7 @@ import ContactCards from "./components/ContactCards";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import contacts from "./contacts.json";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -64,16 +65,17 @@ class App extends Component {
       </div>
     ) : (
       <div className="App">
-        <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        {/* greet user if logged in: */}
-        {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>}
-        {/* Routes to different components */}
-        <SideBar loggedIn={this.state.loggedIn} />
-        <Route
-          exact
-          path="/"
-          render={() => <Home loggedIn={this.state.loggedIn} />}
-        />
+        <div className="mainContent">
+          <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+          <Route
+            exact
+            path="/"
+            render={() => <Home loggedIn={this.state.loggedIn} />}
+          />
+        </div>
+        <div className="sidebar">
+          <SideBar loggedIn={this.state.loggedIn} />
+        </div>
         <Route
           exact
           path="/contacts"

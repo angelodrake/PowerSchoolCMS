@@ -1,0 +1,22 @@
+.announcementBuffer {
+  margin-top: 2rem;
+  margin-left: 16rem;
+}
+
+.announcementHeader {
+  font-size: 28px;
+}
+
+.iconStyle {
+  font-size: 56px;
+  margin-top: 2rem;
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-top: 1rem;
+}
+
+.announcementText {
+  font-size: 22px;
+}
