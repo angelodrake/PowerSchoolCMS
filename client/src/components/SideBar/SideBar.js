@@ -21,8 +21,8 @@ class SideBar extends Component {
               className="school-logo"
               src={require("./images/hopewell.png")}
             />
-            <h2 class="student-name-tag">John Smith</h2>
-            <h4 class="student-id">7508719</h4>
+            <h2 className="student-name-tag">John Smith</h2>
+            <h4 className="student-id">7508719</h4>
             <ul className="menu-list">
               <li>
                 <Link
@@ -47,7 +47,10 @@ class SideBar extends Component {
                   }
                 >
                   <div className="has-text-left">
-                    <i class="mx-3 fa fa-calendar-check" aria-hidden="true" />{" "}
+                    <i
+                      className="mx-3 fa fa-calendar-check"
+                      aria-hidden="true"
+                    />{" "}
                     <div className="side-link-text"> Attendance</div>
                   </div>
                 </Link>

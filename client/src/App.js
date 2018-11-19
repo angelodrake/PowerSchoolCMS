@@ -6,8 +6,10 @@ import Signup from "./components/sign-up";
 import LoginForm from "./components/login-form";
 import Navbar from "./components/navbar";
 import Home from "./components/home";
+import ContactCards from "./components/ContactCards";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
+import contacts from "./contacts.json";
 
 class App extends Component {
   constructor() {
@@ -15,7 +17,8 @@ class App extends Component {
     this.state = {
       loggedIn: false,
       username: null,
-      isLoading: true
+      isLoading: true,
+      contacts
     };
 
     this.getUser = this.getUser.bind(this);
@@ -57,7 +60,7 @@ class App extends Component {
   render() {
     return this.state.isLoading ? (
       <div className="has-text-centered">
-        <a href="" class="button is-loading is-white is-center is-large" />
+        <a href="" className="button is-loading is-white is-center is-large" />
       </div>
     ) : (
       <div className="App">
@@ -70,6 +73,11 @@ class App extends Component {
           exact
           path="/"
           render={() => <Home loggedIn={this.state.loggedIn} />}
+        />
+        <Route
+          exact
+          path="/contacts"
+          render={() => <ContactCards loggedIn={this.state.loggedIn} />}
         />
         <Route
           path="/login"
