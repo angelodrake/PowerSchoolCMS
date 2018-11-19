@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Column from '../Grid/Column';
 import Columns from '../Grid/Columns';
-import './Notifications.css'
+import './Notifications.css';
 
 const Notifications = (props) => {
 
