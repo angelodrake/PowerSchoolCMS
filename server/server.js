@@ -8,7 +8,7 @@ const dbConnection = require("./database");
 const MongoStore = require("connect-mongo")(session);
 const passport = require("./passport");
 const app = express();
-const user = require("./routes/user");
+const API = require("./routes/");
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -16,16 +16,11 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(morgan("dev"));
-app.use(
-  bodyParser.urlencoded({
-    extended: false
-  })
-);
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // Sessions
-app.use(
-  session({
+app.use(session({
     secret: "Kavita-Drake", //pick a random string to make the hash that is generated secure
     store: new MongoStore({ mongooseConnection: dbConnection }),
     resave: false, //required
@@ -38,7 +33,7 @@ app.use(passport.initialize());
 app.use(passport.session()); // calls the deserializeUser
 
 // Routes
-app.use("/user", user);
+app.use('/user', API);
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });

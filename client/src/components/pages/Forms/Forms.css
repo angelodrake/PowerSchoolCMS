@@ -1,0 +1,39 @@
+.separator {
+  border-right: solid 1px #ccc;
+  margin-left: 4rem;
+  margin-right: 3rem;
+}
+
+.formsBuffer {
+  margin: 3rem 5rem 3rem 15rem;
+}
+
+.subtext {
+  font-size: 10px;
+}
+
+.formsContainer {
+  border: solid 1px #ccc;
+  box-shadow: 1px 1px 4px #ccc;
+  border-radius: 6px;
+  margin: 4rem 4rem 4rem 4rem;
+}
+
+.innerContainer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.buttonPadding {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hiddenForm {
+  display: none;
+}
+
+.imgBuffer {
+  margin-left: 8rem;
+  margin-top: 3rem;
+}

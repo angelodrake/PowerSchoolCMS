@@ -5,8 +5,10 @@ import { Route, Link } from "react-router-dom";
 import Signup from "./components/sign-up";
 import LoginForm from "./components/login-form";
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/pages/home";
+import Home from "./components/pages/Home/home";
 import ContactCards from "./components/ContactCards";
+import Support from "./components/pages/Support/Support";
+import Forms from "./components/pages/Forms/Forms";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import contacts from "./contacts.json";
@@ -72,6 +74,16 @@ class App extends Component {
             exact
             path="/"
             render={() => <Home loggedIn={this.state.loggedIn} />}
+          />
+          <Route
+            exact
+            path="/support"
+            render={() => <Support loggedIn={this.state.loggedIn} />}
+          />
+          <Route
+            exact
+            path="/forms"
+            render={() => <Forms loggedIn={this.state.loggedIn} />}
           />
         </div>
         <div className="sidebar">
