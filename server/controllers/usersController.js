@@ -40,6 +40,7 @@ module.exports = {
         };
         res.send(userInfo);
     },
+    //this method is for authentication
     findUser: function (req, res) {
         console.log("===== user!!======");
         console.log(req.user);
@@ -48,6 +49,18 @@ module.exports = {
         } else {
             res.json({ user: null });
         }
+    },
+    //this method is for 'app.com/user/api/user/:id'
+    user: function(req,res){
+        User.findOne({ _id: req.params.id })
+        .populate("gradebook")
+        .populate("form")
+        .then(function (dbUser) {
+          res.json(dbUser);
+        })
+        .catch(function (err) {
+          res.json(err);
+        });
     }
 
 }
