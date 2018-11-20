@@ -6,11 +6,13 @@ import Signup from "./components/sign-up";
 import LoginForm from "./components/login-form";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/pages/Home/home";
-import Support from './components/pages/Support/Support'
-import Forms from './components/pages/Forms/Forms'
+import Contacts from "./components/pages/Contacts";
+import Support from "./components/pages/Support/Support";
+import Forms from "./components/pages/Forms/Forms";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
-import './App.css'
+import Calendar from "./components/pages/Calendar";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -60,7 +62,7 @@ class App extends Component {
   render() {
     return this.state.isLoading ? (
       <div className="has-text-centered">
-        <a href="" class="button is-loading is-white is-center is-large" />
+        <a href="" className="button is-loading is-white is-center is-large" />
       </div>
     ) : (
       <div className="App">
@@ -72,17 +74,30 @@ class App extends Component {
             render={() => <Home loggedIn={this.state.loggedIn} />}
           />
           <Route
-            exact path="/support"
+            exact
+            path="/support"
             render={() => <Support loggedIn={this.state.loggedIn} />}
           />
           <Route
-            exact path="/forms"
+            exact
+            path="/forms"
             render={() => <Forms loggedIn={this.state.loggedIn} />}
           />
         </div>
         <div className="sidebar">
           <SideBar loggedIn={this.state.loggedIn} />
         </div>
+        <Route
+          exact
+          path="/contacts"
+          render={() => <Contacts loggedIn={this.state.loggedIn} />}
+        />
+        <Route
+          exact
+          path="/calendar"
+          render={() => <Calendar loggedIn={this.state.loggedIn} />}
+        />
+
         <Route
           path="/login"
           render={() => <LoginForm updateUser={this.updateUser} />}
