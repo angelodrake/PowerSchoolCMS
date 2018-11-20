@@ -15,8 +15,8 @@ import Calendar from "./components/pages/Calendar";
 import "./App.css";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       loggedIn: false,
       username: null,
@@ -31,7 +31,6 @@ class App extends Component {
   componentDidMount() {
     this.getUser();
     console.log(this.state.loggedIn);
-    console.log(this.state.contacts);
   }
 
   updateUser(userObject) {
