@@ -25,7 +25,7 @@
   margin: 0 auto;
 }
 /* Month header */
-.month {
+.calendar-month {
   padding: 50px 25px;
   width: 100%;
   background: rgb(3, 33, 83);
@@ -33,12 +33,12 @@
 }
 
 /* Month list */
-.month ul {
+.calendar-month ul {
   margin: 0;
   padding: 0;
 }
 
-.month ul li {
+.calendar-month ul li {
   color: white;
   font-size: 20px;
   text-transform: uppercase;
@@ -46,13 +46,13 @@
 }
 
 /* Previous button inside month header */
-.month .prev {
+.calendar-month .prev {
   float: left;
   padding-top: 10px;
 }
 
 /* Next button */
-.month .next {
+.calendar-month .next {
   float: right;
   padding-top: 10px;
 }

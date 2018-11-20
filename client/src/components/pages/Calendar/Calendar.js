@@ -78,7 +78,7 @@ class Calendar extends Component {
             <div className="columns calendar-columns">
               <div className="column is-8">
                 <div className="calendar viewing" id="calendar-nov">
-                  <div className="month">
+                  <div className="calendar-month">
                     <ul className="month-nav">
                       <li
                         className="prev month-toggler"
@@ -250,7 +250,7 @@ class Calendar extends Component {
                   </ul>
                 </div>
                 <div className="calendar not-viewing" id="calendar-dec">
-                  <div className="month">
+                  <div className="calendar-month">
                     <ul className="month-nav">
                       <li
                         className="prev month-toggler"

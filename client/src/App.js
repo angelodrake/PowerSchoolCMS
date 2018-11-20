@@ -6,23 +6,21 @@ import Signup from "./components/sign-up";
 import LoginForm from "./components/login-form";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/pages/Home/home";
-import ContactCards from "./components/ContactCards";
+import Contacts from "./components/pages/Contacts";
 import Support from "./components/pages/Support/Support";
 import Forms from "./components/pages/Forms/Forms";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
-import contacts from "./contacts.json";
 import Calendar from "./components/pages/Calendar";
 import "./App.css";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       loggedIn: false,
       username: null,
-      isLoading: true,
-      contacts
+      isLoading: true
     };
 
     this.getUser = this.getUser.bind(this);
@@ -33,6 +31,7 @@ class App extends Component {
   componentDidMount() {
     this.getUser();
     console.log(this.state.loggedIn);
+    console.log(this.state.contacts);
   }
 
   updateUser(userObject) {
@@ -92,7 +91,7 @@ class App extends Component {
         <Route
           exact
           path="/contacts"
-          render={() => <ContactCards loggedIn={this.state.loggedIn} />}
+          render={() => <Contacts loggedIn={this.state.loggedIn} />}
         />
         <Route
           exact
