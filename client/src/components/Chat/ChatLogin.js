@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { VERIFY_USER } from "../../Events";
+import { VERIFY_USER } from "./Events";
 import "./chat.css";
 
 class ChatLogin extends Component {
@@ -16,6 +16,7 @@ class ChatLogin extends Component {
     if (isUser) {
       this.setError("Username Taken");
     } else {
+      this.setError("");
       this.props.setUser(user);
     }
   };
@@ -25,6 +26,7 @@ class ChatLogin extends Component {
     const { socket } = this.props;
     const { nickname } = this.state;
     console.log(socket);
+    console.log(nickname);
     socket.emit(VERIFY_USER, nickname, this.setUser);
   };
 
@@ -32,9 +34,11 @@ class ChatLogin extends Component {
     this.setState({ nickname: event.target.value });
   };
 
+  //setting error for user display
   setError = error => {
     this.setState({ error });
   };
+
   render() {
     const { nickname, error } = this.state;
     return (
@@ -53,7 +57,7 @@ class ChatLogin extends Component {
             onChange={this.handleChange}
             placeholder={"My Username"}
           />
-          <div className="error"> {error ? error : null}</div>
+          <div className="error"> {this.state.error}</div>
           <button className="btn btn-primary col-1 col-mr-auto" onClick={this.handleSubmit}>
             Submit
           </button>

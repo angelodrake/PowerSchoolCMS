@@ -1,8 +1,8 @@
 const io = require("../server.js").io;
 
-const { VERIFY_USER, USER_CONNECTED, LOGOUT } = require("../../client/src/Events");
-const { createUser, createMessage, createChat } = require("../../client/src/Factories");
-const connectedUsers = {};
+const { VERIFY_USER, USER_CONNECTED, LOGOUT } = require("../../client/src/components/Chat/Events");
+const { createUser, createMessage, createChat } = require("./Factories");
+let connectedUsers = {};
 
 module.exports = function(socket) {
   console.log("Socket ID: " + socket.id);
@@ -14,6 +14,14 @@ module.exports = function(socket) {
     } else {
       callback({ isUser: false, user: createUser({ name: nickname }) });
     }
+  });
+
+  // when user connects
+  socket.on(USER_CONNECTED, user => {
+    connectedUsers = addUser(connectedUsers, user);
+    socket.user = user;
+    io.emit(USER_CONNECTED, connectedUsers);
+    console.log(connectedUsers);
   });
 
   function isUser(userList, username) {

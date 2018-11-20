@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import io from "socket.io-client";
 import "./chat.css";
-import { USER_CONNECTED, LOGOUT } from "../../Events";
+import { USER_CONNECTED, LOGOUT } from "./Events";
 import ChatLogin from "./ChatLogin";
+import ChatContainer from "./chats/ChatContainer";
 
-const socketUrl = "http://localhost:3001)";
+const socketUrl = "http://localhost:3001";
 
 class Chat extends Component {
   constructor(props) {
@@ -30,6 +31,7 @@ class Chat extends Component {
     const { socket } = this.state;
     socket.emit(USER_CONNECTED, user);
     this.setState({ user });
+    console.log(this.state.user);
   };
 
   //user logs out
@@ -41,12 +43,12 @@ class Chat extends Component {
 
   render() {
     const { title } = this.props;
-    const { socket } = this.state;
+    const { socket, user } = this.state;
 
     return (
       <div>
         <h1 className="h1Styles">{title}</h1>
-        <ChatLogin socket={socket} setUser={this.setUser} />
+        {!user ? <ChatLogin socket={socket} setUser={this.setUser} /> : <ChatContainer socket={socket} user={user} logout={this.logout} />}
       </div>
     );
   }
