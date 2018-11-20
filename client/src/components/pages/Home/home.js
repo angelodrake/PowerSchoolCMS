@@ -27,6 +27,7 @@ export default class Home extends Component {
               <Notifications />
             </Column>
             <Column>
+<<<<<<< HEAD
               <Upcoming
                 day="Friday"
                 month="November"
@@ -35,6 +36,9 @@ export default class Home extends Component {
                 testName="Algebra II Final"
                 checkin="You're checked in as Early"
               />
+=======
+              <Upcoming day="Friday" month="November" dayNum="30" time="2nd Period" testName="Math III Final" />
+>>>>>>> 0513eed6b1652aaa12940a6260cc59123740626f
             </Column>
           </Columns>
         ) : (
