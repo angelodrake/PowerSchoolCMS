@@ -17,16 +17,17 @@ class Footer extends Component {
       <div>
         {loggedIn ? (
           <footer>
-            {" "}
-            <img
-              className="bottom-logo"
-              src={require("./images/hopewell.png")}
-            />
-            Copyright © 2018 Final Group{" "}
-            <img
-              className="bottom-logo"
-              src={require("./images/hopewell.png")}
-            />
+            <div className="has-text-centered">
+              <img
+                className="bottom-logo"
+                src={require("./images/hopewell.png")}
+              />
+              Copyright © 2018 Final Group{" "}
+              <img
+                className="bottom-logo"
+                src={require("./images/hopewell.png")}
+              />
+            </div>
           </footer>
         ) : (
           <div>

@@ -10,7 +10,9 @@ aside {
 
 .school-logo {
   width: 50%;
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .student-name-tag {
