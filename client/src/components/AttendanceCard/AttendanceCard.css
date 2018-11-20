@@ -1,0 +1,21 @@
+.attendanceSubtext {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.attendanceCardBuffer {
+  margin: 4rem 4rem 2rem 12rem;
+  border: solid 1px #ccc;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px #ccc;
+}
+
+.attendanceClassTitle {
+  font-size: 26px;
+}
+
+.attendanceSeparator {
+  margin-left: 8rem;
+  margin-right: 9rem;
+  border-right: solid 1px #ccc;
+}

@@ -11,6 +11,9 @@ export default class Forms extends React.Component {
       redirectTo: "/login"
     };
     this.fieldTripView = this.fieldTripView.bind(this);
+    this.movieView = this.movieView.bind(this);
+    this.earlyReleaseView = this.earlyReleaseView.bind(this);
+    this.lateArrivalView = this.lateArrivalView.bind(this);
   }
 
   fieldTripView() {
@@ -117,7 +120,7 @@ export default class Forms extends React.Component {
                   </div>
                 </div>
                 <div id="lateArrivalContainer" className="">
-                  {/* <img id="lateArrivalImg" className="hiddenForm" src={require("./images/lateArrivalForm.png")} /> */ }
+                  <img id="lateArrivalImg" className="hiddenForm" src={require("./images/lateArrivalForm.png")} />
                 </div>
               </div>
             </Column>
