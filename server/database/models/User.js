@@ -19,6 +19,14 @@ const userSchema = new Schema({
       // The ObjectIds will refer to the ids in the Coursework model
       ref: "Coursework"
     }
+  ],
+  form: [
+    {
+      // Store ObjectIds in the array
+      type: Schema.Types.ObjectId,
+      // The ObjectIds will refer to the ids in the Form model
+      ref: "Form"
+    }
   ]
 });
 
@@ -42,6 +50,10 @@ userSchema.pre("save", function(next) {
     next();
   }
 });
+
+// //auto increment
+autoIncrement.initialize(mongoose.connection);
+userSchema.plugin(autoIncrement.plugin, 'User');
 
 const User = mongoose.model("User", userSchema);
 module.exports = User;

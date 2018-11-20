@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./StudentWall.css";
-import Columns from "../Grid/Columns";
-import Column from "../Grid/Column";
-import Announcements from "../Announcements/Announcements";
-import Notifications from "../Notifications/Notifications";
-import Upcoming from "../Upcoming/Upcoming";
+import Column from "../../Grid/Column";
+import Columns from "../../Grid/Columns";
+import Announcements from "../../Announcements/Announcements";
+import Notifications from "../../Notifications/Notifications";
+import Upcoming from "../../Upcoming/Upcoming";
 import { Redirect } from "react-router-dom";
 
-class Home extends Component {
+export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -47,4 +47,3 @@ class Home extends Component {
     );
   }
 }
-export default Home;

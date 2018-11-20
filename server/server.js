@@ -15,17 +15,14 @@ let io = (module.exports.io = require("socket.io")(server));
 const SocketManager = require("./chat/SocketManager.js");
 
 io.on("connection", SocketManager);
+const API = require("./routes/");
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
 app.use(morgan("dev"));
-app.use(
-  bodyParser.urlencoded({
-    extended: false
-  })
-);
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Sessions
@@ -43,7 +40,7 @@ app.use(passport.initialize());
 app.use(passport.session()); //Checks user session in local strat
 
 // Routes
-app.use("/user", user);
+app.use("/user", API);
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
