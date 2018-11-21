@@ -21,12 +21,12 @@ const Upcoming = props => {
           <div className="break" />
           <div className="has-text-centered">
             <p>
-              <Link to="/session-details" className="details">
-                <i className="fas fa-sign-in-alt" /> Session Details
+              <Link to="/formal-details" className="details">
+                <i className="fas fa-sign-in-alt" /> Formal Details
               </Link>
             </p>
             <p>
-              <Link to="/absence-request" className="absence">
+              <Link to="/support" className="absence">
                 <i className="fas fa-calendar-times" /> Request Absence
               </Link>
             </p>
