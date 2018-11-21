@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "courseName": "Math 3",
+    "assignmentName": "Sequence and of convergence of a sequence",
+    "date": "13th August 2018",
+    "score": 90,
+    "category": "Informal"
+  },
+  {
+    "id": 2,
+    "courseName": "Math 3",
+    "assignmentName": "Rolle’s theorem and the Mean-Value theorem",
+    "date": "13th September 2018",
+    "score": 80,
+    "category": "Informal"
+  },
+  {
+    "id": 3,
+    "courseName": "Math 3",
+    "assignmentName": "L’Hospital’s rule and the Inverse-Function theorem",
+    "date": "13th October 2018",
+    "score": 100,
+    "category": "Informal"
+  },
+  {
+    "id": 4,
+    "courseName": "Math 3",
+    "assignmentName": "First Mid-term exam",
+    "date": "13th November 2018",
+    "score": 50,
+    "category": "Formal"
+  },
+  {
+    "id": 5,
+    "courseName": "English 3",
+    "assignmentName": "Twelfth Night – William Shakespeare",
+    "date": "10th August 2018",
+    "score": 70,
+    "category": "Informal"
+  },
+  {
+    "id": 6,
+    "courseName": "English 3",
+    "assignmentName": "A View from the Bridge – Arthur Miller",
+    "date": "10th September 2018",
+    "score": 70,
+    "category": "Informal"
+  },
+  {
+    "id": 7,
+    "courseName": "English 3",
+    "assignmentName": "Introduction to Alphabet",
+    "date": "17th November 2018",
+    "score": 70,
+    "category": "Informal"
+  },
+  {
+    "id": 8,
+    "courseName": "English 3",
+    "assignmentName": "The Play of Kes by Barry Hines & Allan Stronach (Heinemann Plays)",
+    "date": "17th November 2018",
+    "score": 70,
+    "category": "Formal"
+  },
+  {
+    "id": 9,
+    "courseName": "Biology",
+    "assignmentName": "Mechanisms of Genetic Recombination",
+    "date": "17th August 2018",
+    "score": 100,
+    "category": "Informal"
+  },
+  {
+    "id": 10,
+    "courseName": "Biology",
+    "assignmentName": "Neurophysiology",
+    "date": "17th September 2018",
+    "score": 100,
+    "category": "Informal"
+  },
+  {
+    "id": 11,
+    "courseName": "Biology",
+    "assignmentName": "Immunology-I",
+    "date": "17th October 2018",
+    "score": 90,
+    "category": "Informal"
+  },
+  {
+    "id": 12,
+    "courseName": "Biology",
+    "assignmentName": "Human Gross Anatomy",
+    "date": "17th November 2018",
+    "score": 90,
+    "category": "Formal"
+  },
+  {
+    "id": 13,
+    "courseName": "Geography",
+    "assignmentName": "Introduction to Economic Geography",
+    "date": "16th August 2018",
+    "score": 90,
+    "category": "Informal"
+  },
+  {
+    "id": 14,
+    "courseName": "Geography",
+    "assignmentName": "Geography of North Carolina",
+    "date": "16th October 2018",
+    "score": 90,
+    "category": "Informal"
+  },
+  {
+    "id": 15,
+    "courseName": "Geography",
+    "assignmentName": "Mid-term Exam",
+    "date": "16th November 2018",
+    "score": 90,
+    "category": "Formal"
+  }
+]

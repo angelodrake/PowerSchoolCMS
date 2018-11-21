@@ -4,18 +4,6 @@
 
 .calendar-page-holder {
   height: 100%;
-  width: calc(100%-14rem);
-  margin-left: 14rem;
-  background: linear-gradient(
-    45deg,
-    rgb(3, 33, 83) 0%,
-    rgb(150, 192, 230) 100%
-  );
-  /* no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
   padding: 3% 0px;
   min-height: 100vh;
 }

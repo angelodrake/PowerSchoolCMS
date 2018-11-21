@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Route, Link } from "react-router-dom";
 // components
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 import Signup from "./components/pages/SignUp/SignUp";
 import LoginForm from "./components/pages/LoginForm/LoginForm";
 import Navbar from "./components/Navbar/Navbar";
@@ -14,6 +14,7 @@ import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import Chat from "./components/Chat/chat";
 import Calendar from "./components/pages/Calendar";
+import Grades from "./components/pages/Grades";
 import Attendance from "./components/pages/Attendance/Attendance";
 import "./App.css";
 
@@ -78,6 +79,7 @@ class App extends Component {
             <Route exact path="/attendance" render={() => <Attendance loggedIn={this.state.loggedIn} />} />
             <Route exact path="/contacts" render={() => <Contacts loggedIn={this.state.loggedIn} />} />
             <Route exact path="/calendar" render={() => <Calendar loggedIn={this.state.loggedIn} />} />
+            <Route exact path="/grades" render={() => <Grades loggedIn={this.state.loggedIn} />} />
           </div>
           <div className="sidebar">
             <SideBar loggedIn={this.state.loggedIn} />

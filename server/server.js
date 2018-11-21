@@ -16,6 +16,8 @@ const SocketManager = require("./chat/SocketManager.js");
 
 io.on("connection", SocketManager);
 const API = require("./routes/");
+const userAPI = require("./routes/");
+const apiRoute = require("./routes/api");
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -45,6 +47,8 @@ app.use("/user", API);
 //   io.emit("sendMessage", req.body);
 // });
 
+app.use("/api", apiRoute);
+app.use("/user", userAPI);
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });

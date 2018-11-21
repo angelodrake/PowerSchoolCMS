@@ -7,16 +7,18 @@ var Schema = mongoose.Schema;
 var FormSchema = new Schema({
   name: {
     type: String
-    // ,
-    // required: "sub is Required"
   },
   date: {
     type: Date
   },
   isRead: {
     type: Boolean
-    // ,
-    // required: "Subject is Required"
+  },
+  imgName:{
+    type:String
+  },
+  imgUrl:{
+    type:String
   }
 });
 
