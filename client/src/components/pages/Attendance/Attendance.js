@@ -16,7 +16,7 @@ class Attendance extends React.Component {
     return (
       <div>
         {loggedIn ? (
-          <div>
+          <div className="mt">
             <AttendanceCard classTitle="Math III" excusedAbsences={3} unexcusedAbsences={1} excusedTardies={2} unexcusedTardies={0} />
             <AttendanceCard classTitle="English III" excusedAbsences={1} unexcusedAbsences={1} excusedTardies={2} unexcusedTardies={0} />
             <AttendanceCard classTitle="Biology" excusedAbsences={0} unexcusedAbsences={1} excusedTardies={0} unexcusedTardies={2} />

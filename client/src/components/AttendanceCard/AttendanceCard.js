@@ -6,8 +6,8 @@ import './AttendanceCard.css';
 const AttendanceCard = (props) => {
 
   return (
-    <Columns>
-      <Column size="is-three-fifths is-centered attendanceCardBuffer">
+    <Columns extras="is-centered">
+      <Column size="is-half attendanceCardBuffer">
         <div className="has-text-centered">
           <p className="attendanceClassTitle">
             {props.classTitle}
@@ -15,15 +15,15 @@ const AttendanceCard = (props) => {
         </div>
         <div className="break"></div>
         <div>
-          <div className="field is-grouped is-grouped-centered">
+          <div className="field is-grouped is-grouped-centered mb">
             <div className="control">
-              <p>Absences</p>
+              <p className="atendanceSubtitle">Absences</p>
               <p className="attendanceSubtext">Excused: {props.excusedAbsences}</p>
               <p className="attendanceSubtext">Unexcused: {props.unexcusedAbsences}</p>
             </div>
             <div className="attendanceSeparator"></div>
             <div className="control">
-              <p>Tardies</p>
+              <p className="atendanceSubtitle">Tardies</p>
               <p className="attendanceSubtext">Excused: {props.excusedTardies}</p>
               <p className="attendanceSubtext">Unexcused: {props.unexcusedTardies}</p>
             </div>

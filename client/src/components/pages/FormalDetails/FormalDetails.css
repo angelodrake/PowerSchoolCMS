@@ -1,0 +1,39 @@
+.formalDetailsBuffer {
+  margin-top: 3rem;
+}
+
+.formalTitle {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.formalSubtitle {
+  font-size: 20px;
+  font-weight: 550;
+  margin-bottom: 1rem;
+}
+
+.bottomBreak {
+  border-bottom: solid 1px #ccc;
+}
+
+.sideText {
+  font-size: 18px;
+  font-weight: 550;
+  margin-top: 1rem;
+}
+
+.detailsHeader {
+  font-size: 20px;
+  font-weight: 550;
+  margin-top: 1rem;
+}
+
+.detailsText {
+  font-size: 18px;
+  margin-top: 1rem;
+}
+
+.reschedule {
+  margin-top: 5rem;
+}
