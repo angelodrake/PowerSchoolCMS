@@ -9,7 +9,7 @@
 .iconFormat {
   font-size: 22px;
   border: none;
-  margin-top: .4rem;
+  margin-top: 0.4rem;
   background: rgb(3, 33, 91);
   color: #fff;
 }
@@ -36,4 +36,11 @@
 .navStyles {
   background: rgb(3, 33, 91);
   box-shadow: 1px 1px 6px;
+}
+
+#navbar-burger {
+  color: white;
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
