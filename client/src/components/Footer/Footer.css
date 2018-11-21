@@ -9,5 +9,12 @@ footer {
   color: white;
   margin-left: 14rem;
   margin-top: 4rem;
-  width:85vw;
+  width: 85vw;
+}
+
+@media (max-width: 1087.5px) {
+  footer {
+    margin-left: 0px;
+    width: 100vw;
+  }
 }
