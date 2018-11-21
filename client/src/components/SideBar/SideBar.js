@@ -32,7 +32,10 @@ class SideBar extends Component {
                   }
                 >
                   <div className="has-text-left">
-                    <i className="mx-3 fa fa-home" aria-hidden="true" />{" "}
+                    <i
+                      className="sidebar-icons fa fa-home"
+                      aria-hidden="true"
+                    />{" "}
                     <div className="side-link-text"> Home</div>
                   </div>
                 </Link>
@@ -48,7 +51,7 @@ class SideBar extends Component {
                 >
                   <div className="has-text-left">
                     <i
-                      className="mx-3 fa fa-calendar-check"
+                      className="sidebar-icons fa fa-calendar-check"
                       aria-hidden="true"
                     />{" "}
                     <div className="side-link-text"> Attendance</div>
@@ -64,7 +67,7 @@ class SideBar extends Component {
                 >
                   <div className="has-text-left">
                     <i
-                      className="mx-3 fa fa-graduation-cap m"
+                      className="sidebar-icons fa fa-graduation-cap m"
                       aria-hidden="true"
                     />
                     <div className="side-link-text"> Grades</div>
@@ -79,7 +82,10 @@ class SideBar extends Component {
                   }
                 >
                   <div className="has-text-left">
-                    <i className="mx-3 fa fa-calendar" aria-hidden="true" />{" "}
+                    <i
+                      className="sidebar-icons fa fa-calendar"
+                      aria-hidden="true"
+                    />{" "}
                     <div className="side-link-text"> Events Calendar</div>
                   </div>
                 </Link>
@@ -92,7 +98,10 @@ class SideBar extends Component {
                   }
                 >
                   <div className="has-text-left">
-                    <i className="mx-3 fa fa-users" aria-hidden="true" />{" "}
+                    <i
+                      className="sidebar-icons fa fa-users"
+                      aria-hidden="true"
+                    />{" "}
                     <div className="side-link-text"> Contacts</div>
                   </div>
                 </Link>
@@ -106,7 +115,10 @@ class SideBar extends Component {
                   }
                 >
                   <div className="has-text-left">
-                    <i className="mx-3 fa fa-file" aria-hidden="true" />
+                    <i
+                      className="sidebar-icons fa fa-file"
+                      aria-hidden="true"
+                    />
                     <div className="side-link-text"> Forms</div>
                   </div>
                 </Link>

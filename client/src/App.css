@@ -1,12 +1,18 @@
-.sidebar {
-
-}
-
 .mainContent {
   margin-left: 14rem;
   flex: 1 0 auto;
+  width:85vw;
 }
 
 .is-loading {
   margin-top: 10%;
+}
+
+.modal{
+  min-width:60vw
+ }
+
+.col-sm-6{
+  min-height:80vh;
+  
 }

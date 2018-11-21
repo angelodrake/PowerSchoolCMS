@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Route, Link } from "react-router-dom";
 // components
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Signup from "./components/pages/SignUp/SignUp";
 import LoginForm from "./components/pages/LoginForm/LoginForm";
 import Navbar from "./components/Navbar/Navbar";
@@ -12,9 +13,14 @@ import Forms from "./components/pages/Forms/Forms";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import Calendar from "./components/pages/Calendar";
+<<<<<<< HEAD
 import Attendance from './components/pages/Attendance/Attendance'
 import FormalDetails from './components/pages/FormalDetails/FormalDetails';
 import Alerts from './components/Alerts/Alerts'
+=======
+import Grades from "./components/pages/Grades";
+import Attendance from "./components/pages/Attendance/Attendance";
+>>>>>>> a7809c1924d1807edd7e0dff0ad65a218a258f46
 import "./App.css";
 
 class App extends Component {
@@ -71,10 +77,17 @@ class App extends Component {
       <div>
         <div className="App">
           <div className="mainContent">
+<<<<<<< HEAD
             <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn}>
               <Alerts alertText="Graded: Homework #7 has been graded!" />
               <Alerts alertText="Homework #8: Due: Dec 6th at 11:59pm" />
             </Navbar>
+=======
+            <Navbar
+              updateUser={this.updateUser}
+              loggedIn={this.state.loggedIn}
+            />
+>>>>>>> a7809c1924d1807edd7e0dff0ad65a218a258f46
             <Route
               exact
               path="/"
@@ -107,6 +120,7 @@ class App extends Component {
             />
             <Route
               exact
+<<<<<<< HEAD
               path="/formal-details"
               render={() => <FormalDetails
                 loggedIn={this.state.loggedIn}
@@ -181,6 +195,11 @@ class App extends Component {
                 infoText="This homework is about the properties of logs, which was gone over at the beginning of this week in class. You should not need to use any information outside of what was taught in class this week. Please be sure to show all work and include the answer in the answers section for my own quick reference."
               />}
             />
+              <Route
+                exact
+                path="/grades"
+                render={() => <Grades loggedIn={this.state.loggedIn} />}
+              />
           </div>
           <div className="sidebar">
             <SideBar loggedIn={this.state.loggedIn} />
@@ -192,10 +211,7 @@ class App extends Component {
             path="/login"
             render={() => <LoginForm updateUser={this.updateUser} />}
           />
-          <Route
-            path="/signup"
-            render={() => <Signup />}
-          />
+          <Route path="/signup" render={() => <Signup />} />
         </div>
       </div>
     );

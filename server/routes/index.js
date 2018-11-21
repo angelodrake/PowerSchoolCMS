@@ -1,11 +1,7 @@
 const router = require("express").Router();
-const formRoutes = require("./form");
-const gradebookRoutes = require("./gradebook");
-const user = require("./user")
+const user = require("./user");
 
-// Book routes
-router.use("/api/form", formRoutes);
-router.use("/api/gradebook", gradebookRoutes);
+// this is "localhost:3001/user/"
 router.use("/", user)
 
 module.exports = router;
