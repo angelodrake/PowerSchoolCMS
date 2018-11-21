@@ -4,7 +4,16 @@ import Column from '../../Grid/Column';
 import Columns from '../../Grid/Columns';
 import './Forms.css';
 import forms from './form.json';
-
+import {
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  Form,
+  FormGroup,
+  Label,
+  Input
+} from 'reactstrap';
 
 export default class Forms extends React.Component {
   state = {
@@ -66,6 +75,34 @@ export default class Forms extends React.Component {
                 ))}
               </Column>
             </Columns>
+
+            <Modal isOpen={this.state.modal}
+              toggle={this.toggle}
+            >
+              <ModalHeader toggle={this.toggle}
+              >Add to shoppping list
+                    </ModalHeader>
+              <ModalBody>
+                <Form onSubmit={this.onSubmit}>
+                  <FormGroup>
+                    <Label for="item">Item</Label>
+                    <Input
+                      type="text"
+                      name="name"
+                      placeholder="add shopping item"
+                      onChange={this.onChange}
+                    />
+                    <Button
+                      color="dark"
+                      style={{ marginTop: '2rem' }}
+                      block
+                    >
+                      Add Item
+                            </Button>
+                  </FormGroup>
+                </Form>
+              </ModalBody>
+            </Modal>
 
 
           </div>
