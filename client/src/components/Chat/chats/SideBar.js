@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import FAChevronDown from "react-icons/lib/md/keyboar-arrow-down";
-import FAMenu from "react-icons/lib/fa/list-ul";
-import FASearch from "react-icons/lib/fa/search";
-import MdEject from "react-icons/lib/md/eject";
+// import FAChevronDown from "react-icons/lib/md/keyboar-arrow-down";
+// import FAMenu from "react-icons/lib/fa/list-ul";
+// import FASearch from "react-icons/lib/fa/search";
+// import MdEject from "react-icons/lib/md/eject";
 import "../chat.css";
 
 class SideBar extends Component {
@@ -11,17 +11,11 @@ class SideBar extends Component {
     return (
       <div id="side-bar" className="h1Styles">
         <div className="heading">
-          <div className="app-name">
-            Our Cool Chat <FAChevronDown />
-          </div>
-          <div className="menu">
-            <FAMenu />
-          </div>
+          <div className="app-name">{/* Our Cool Chat <FAChevronDown /> */}</div>
+          <div className="menu">{/* <FAMenu /> */}</div>
         </div>
         <div className="search">
-          <i className="search-icon">
-            <FASearch />
-          </i>
+          <i className="search-icon">{/* <FASearch /> */}</i>
           <input placeholder="Search" type="text" />
           <div className="plus" />
         </div>
@@ -69,7 +63,7 @@ class SideBar extends Component {
             title="Logout"
             className="logout"
           >
-            <MdEject />
+            {/* <MdEject /> */}
           </div>
         </div>
       </div>
