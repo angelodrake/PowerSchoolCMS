@@ -15,13 +15,13 @@ const Notifications = props => {
               <Column size="colBorder">
                 <div className="has-text-centered atnText">
                   <span className="boldSpan">Due: Homework #8:</span>{" "}
-                  Trigonometric Functions Practice 2 is due Thursday, Dec 6th by
+                  Foundations of Cell Biology is due Thursday, Dec 6th by
                   11:59pm.
                 </div>
                 <div className="break" />
                 <div className="has-text-centered">
                   <p className="notifDetails">
-                    <Link to="/notifications/details/:id">
+                    <Link to="/notifications/details/1">
                       <i className="fas fa-paste" /> Details
                     </Link>
                   </p>
@@ -34,13 +34,13 @@ const Notifications = props => {
               <Column size="colBorder">
                 <div className="has-text-centered atnText">
                   <span className="boldSpan">Attention:</span> You've used 4 of
-                  your 5 absences, one more and you'll have to report to
+                  your 5 absences in English III, one more and you'll have to report to
                   administration for recovery.
                 </div>
                 <div className="break" />
                 <div className="has-text-centered">
                   <p className="notifDetails">
-                    <Link to="/notifications/details/:id">
+                    <Link to="/notifications/details/2">
                       <i className="fas fa-paste" /> Details
                     </Link>
                   </p>
@@ -59,7 +59,7 @@ const Notifications = props => {
                 <div className="break" />
                 <div className="has-text-centered">
                   <p className="notifDetails">
-                    <Link to="/notifications/details/:id">
+                    <Link to="/notifications/details/3">
                       <i className="fas fa-paste" /> Details
                     </Link>
                   </p>
@@ -78,7 +78,7 @@ const Notifications = props => {
                 <div className="break" />
                 <div className="has-text-centered">
                   <p className="notifDetails">
-                    <Link to="/notifications/details/:id">
+                    <Link to="/notifications/details/4">
                       <i className="fas fa-paste" /> Details
                     </Link>
                   </p>
@@ -91,12 +91,12 @@ const Notifications = props => {
               <Column size="colBorder">
                 <div className="has-text-centered atnText">
                   <span className="boldSpan">Due: Homework #7: </span> Property
-                  of Logs Practice is due on the Tuesday, Dec 4th by 11:59pm.
+                  of Logs Practice is due on the Friday, Nov 23rd by 11:59pm.
                 </div>
                 <div className="break" />
                 <div className="has-text-centered">
                   <p className="notifDetails">
-                    <Link to="/notifications/details/:id">
+                    <Link to="/notifications/details/5">
                       <i className="fas fa-paste" /> Details
                     </Link>
                   </p>
