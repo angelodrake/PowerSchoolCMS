@@ -9,6 +9,7 @@ import {
   ModalBody,
 } from 'reactstrap';
 import API from '../../../utils/API'
+import moment from 'moment'
 
 
 
@@ -74,7 +75,7 @@ export default class Forms extends React.Component {
                     <div className="innerContainer">
                       <div className="has-text-centered">
                         <span className="boldSpan">{forms.name}</span><br />
-                        <span className="boldSpan">Date: {forms.dateExpire}</span>
+                        <span className="boldSpan">Date: {moment(forms.date).format('YYYY-MM-DD')}</span>
                       </div>
                       <div className="break"></div>
                       <div className="field is-grouped is-grouped-centered formButtons">
