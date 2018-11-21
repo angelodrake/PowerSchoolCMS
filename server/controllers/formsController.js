@@ -32,7 +32,7 @@ module.exports = {
   // update form under target id
   update: function(req, res) {
     db.Form
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({ name: req.params.name }, req.body)
       .then(Form => res.json(Form))
       .catch(err => res.status(422).json(err));
   },
