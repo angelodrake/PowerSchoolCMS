@@ -62,6 +62,7 @@ class Navbar extends Component {
                 aria-label="menu"
                 aria-expanded="false"
                 data-target="navbarBasicExample"
+                id="navbar-burger"
               >
                 <span aria-hidden="true" />
                 <span aria-hidden="true" />
