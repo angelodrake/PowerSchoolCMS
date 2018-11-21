@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Route, Link } from "react-router-dom";
 // components
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 import Signup from "./components/pages/SignUp/SignUp";
 import LoginForm from "./components/pages/LoginForm/LoginForm";
 import Navbar from "./components/Navbar/Navbar";
@@ -18,8 +18,8 @@ import Attendance from "./components/pages/Attendance/Attendance";
 import "./App.css";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       loggedIn: false,
       username: null,
@@ -112,7 +112,10 @@ class App extends Component {
             />
           </div>
           <div className="sidebar">
-            <SideBar loggedIn={this.state.loggedIn} />
+            <SideBar
+              loggedIn={this.state.loggedIn}
+              currentUser={this.state.username}
+            />
           </div>
           <Footer loggedIn={this.state.loggedIn} />
         </div>

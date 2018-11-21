@@ -32,3 +32,21 @@ aside {
 .sidebar-icons {
   position: absolute;
 }
+
+.is-current {
+  background-color: rgb(150, 192, 232);
+}
+
+.side-link-text {
+  color: rgb(3, 33, 83);
+}
+
+.sidebar-icons {
+  color: rgb(3, 33, 83);
+}
+
+@media (max-width: 1087.5px) {
+  .is-display-none {
+    display: none;
+  }
+}
