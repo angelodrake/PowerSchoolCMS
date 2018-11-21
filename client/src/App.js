@@ -13,14 +13,10 @@ import Forms from "./components/pages/Forms/Forms";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import Calendar from "./components/pages/Calendar";
-<<<<<<< HEAD
 import Attendance from './components/pages/Attendance/Attendance'
 import FormalDetails from './components/pages/FormalDetails/FormalDetails';
-import Alerts from './components/Alerts/Alerts'
-=======
 import Grades from "./components/pages/Grades";
-import Attendance from "./components/pages/Attendance/Attendance";
->>>>>>> a7809c1924d1807edd7e0dff0ad65a218a258f46
+import Alerts from './components/Alerts/Alerts'
 import "./App.css";
 
 class App extends Component {
@@ -77,17 +73,10 @@ class App extends Component {
       <div>
         <div className="App">
           <div className="mainContent">
-<<<<<<< HEAD
-            <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn}>
-              <Alerts alertText="Graded: Homework #7 has been graded!" />
-              <Alerts alertText="Homework #8: Due: Dec 6th at 11:59pm" />
-            </Navbar>
-=======
             <Navbar
               updateUser={this.updateUser}
               loggedIn={this.state.loggedIn}
             />
->>>>>>> a7809c1924d1807edd7e0dff0ad65a218a258f46
             <Route
               exact
               path="/"
@@ -120,7 +109,6 @@ class App extends Component {
             />
             <Route
               exact
-<<<<<<< HEAD
               path="/formal-details"
               render={() => <FormalDetails
                 loggedIn={this.state.loggedIn}

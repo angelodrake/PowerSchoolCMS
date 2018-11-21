@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Grades.css";
 import { Redirect } from "react-router-dom";
 import grade from "./grade.json";
-import GradesTopInfo from "../../GradesTopInfo/GradesTopInfo";
+import GradesTopInfo from "./GradesTopInfo/GradesTopInfo";
 
 class Grades extends Component {
   state = {
@@ -21,17 +21,17 @@ class Grades extends Component {
   gradeFilter = () => {
     this.setState({
       english: grade.filter(course => course.courseName === "English 3")
-    });
+    },()=>(console.log('Eng: '+this.state.english)));
     this.setState({
       math: grade.filter(course => course.courseName === "Math 3")
-    });
+    },()=>(console.log('math: '+this.state.math)));
 
     this.setState({
       geography: grade.filter(course => course.courseName === "Geography")
-    });
+    },()=>(console.log('geo: '+this.state.geography)));
     this.setState({
       biology: grade.filter(course => course.courseName === "Biology")
-    });
+    },()=>(console.log('nbio: '+this.state.biology)));
   };
 
   calculateLetterGrade = numGrade => {
@@ -43,6 +43,10 @@ class Grades extends Component {
     else if (numGrade < 50) letterGrade = "F";
     return letterGrade;
   };
+
+  handleOnClick=(e)=>{
+    
+  }
 
   render() {
     const loggedIn = this.props.loggedIn;
@@ -97,7 +101,11 @@ class Grades extends Component {
                     </div>
                     <div className="column is-4">
                       <p className="view-assignments">
-                        <span className="button view-assignments-button">
+                        <span 
+                        className="button view-assignments-button"
+                        name='English'
+                        onClick={this.handleOnClick}
+                        >
                           View Assignments
                         </span>
                       </p>
