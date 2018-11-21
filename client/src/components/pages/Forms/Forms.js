@@ -17,6 +17,7 @@ export default class Forms extends React.Component {
     redirectTo: "/login",
     forms: [],
     modal: false,
+    _id:"",
     imgUrl: "",
     imgName: "",
     isRead: false
@@ -45,18 +46,18 @@ export default class Forms extends React.Component {
       .catch(err => console.log(err));
   }
 
-  handleAsRead = (name) => {
+  handleAsRead = (id) => {
 
     const readForm = {
       isRead: true
     }
 
-    API.markAsSaved(name, readForm)
+    API.markAsSaved(id, readForm)
       .then(res => {
         this.loadAllForms()
       })
       .catch(err => console.log(err));
-    console.log(readForm)
+    console.log(this.state)
   }
 
 
@@ -89,7 +90,7 @@ export default class Forms extends React.Component {
                           <div className="control">
                             <button className="button danger"
                               name={forms.name}
-                              onClick={() => this.handleAsRead(forms.name)}
+                              onClick={() => this.handleAsRead(forms._id)}
                             >Click to mark as Read</button>
                           </div>
                         ) : (

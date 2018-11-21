@@ -4,7 +4,7 @@ mongoose.Promise = global.Promise;
 
 //your local database url
 //27017 is the default mongoDB port
-const uri = "mongodb://powerschool:powerschool123@ds211694.mlab.com:11694/powerschoolcms";
+const uri = "mongodb://localhost/powerschoolCMS";
 
 mongoose.connect(uri).then(
   () => {

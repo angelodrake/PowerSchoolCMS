@@ -1,7 +1,7 @@
 const db = require("../database/models/");
 
-// Defining methods for the gradebooksController
 module.exports = {
+  //you are now looking at : "localhost:3001/api/form"
   findAll: function(req, res) {
     db.Form
       .find(req.query)
@@ -15,6 +15,14 @@ module.exports = {
       .then(Form => res.json(Form))
       .catch(err => res.status(422).json(err));
   },
+  //update form under target id
+  update: function(req, res) {
+    db.Form
+      .findOneAndUpdate({_id: req.params.id }, req.body)
+      .then(Form => res.json(Form))
+      .catch(err => res.status(422).json(err));
+  },
+  //POSTMAN ROUTES
   // create form under target id
   create: function(req, res) {
     db.Form
@@ -28,13 +36,6 @@ module.exports = {
       .catch(function (err) {
         res.json(err);
       });
-  },
-  // update form under target id
-  update: function(req, res) {
-    db.Form
-      .findOneAndUpdate({ name: req.params.name }, req.body)
-      .then(Form => res.json(Form))
-      .catch(err => res.status(422).json(err));
   },
   // delete form under target id
   remove: function(req, res) {
