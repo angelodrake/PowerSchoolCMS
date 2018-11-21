@@ -1,10 +1,4 @@
 .contacts-holder {
-  margin-left: 14rem;
-  background: linear-gradient(
-    45deg,
-    rgb(3, 33, 83) 0%,
-    rgb(150, 192, 230) 100%
-  );
   min-height: 100vh;
 }
 
@@ -22,9 +16,15 @@ li {
 }
 
 .is-128x128 {
-  margin: 2%;
+  margin-left: 5%;
+  margin-bottom: 5%;
 }
 
 .card {
-  overflow: auto;
+  overflow: hidden;
+}
+
+.contacts-card-content {
+  padding-left: 0px;
+  padding-bottom: 0px;
 }

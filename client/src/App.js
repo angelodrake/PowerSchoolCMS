@@ -13,7 +13,8 @@ import Forms from "./components/pages/Forms/Forms";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import Calendar from "./components/pages/Calendar";
-import Attendance from './components/pages/Attendance/Attendance'
+import Grades from "./components/pages/Grades";
+import Attendance from "./components/pages/Attendance/Attendance";
 import "./App.css";
 
 class App extends Component {
@@ -70,7 +71,10 @@ class App extends Component {
       <div>
         <div className="App">
           <div className="mainContent">
-            <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+            <Navbar
+              updateUser={this.updateUser}
+              loggedIn={this.state.loggedIn}
+            />
             <Route
               exact
               path="/"
@@ -101,6 +105,11 @@ class App extends Component {
               path="/calendar"
               render={() => <Calendar loggedIn={this.state.loggedIn} />}
             />
+            <Route
+              exact
+              path="/grades"
+              render={() => <Grades loggedIn={this.state.loggedIn} />}
+            />
           </div>
           <div className="sidebar">
             <SideBar loggedIn={this.state.loggedIn} />
@@ -112,10 +121,7 @@ class App extends Component {
             path="/login"
             render={() => <LoginForm updateUser={this.updateUser} />}
           />
-          <Route
-            path="/signup"
-            render={() => <Signup />}
-          />
+          <Route path="/signup" render={() => <Signup />} />
         </div>
       </div>
     );

@@ -431,7 +431,7 @@ class Calendar extends Component {
                   <div className="card-content">
                     <div className="days-events-holder">
                       <ul id="events-list">
-                        <li>Project 3 Presentation (10:00-14:30)</li>
+                        <li>Biology Project Presentation</li>
                         <li>Last day of class before Thanksgiving break.</li>
                       </ul>
                     </div>

@@ -1,0 +1,72 @@
+.grades-page-holder {
+  height: 100%;
+  padding: 3% 0px;
+  min-height: 100vh;
+}
+
+.separator {
+  border-right: solid 1px #ccc;
+  margin-left: 4rem;
+  margin-right: 3rem;
+}
+
+.formsBuffer {
+  margin: 3rem 5rem 3rem 15rem;
+}
+
+.subtext {
+  font-size: 10px;
+}
+
+.grades-cards {
+  border: solid 1px #ccc;
+  box-shadow: 1px 1px 4px #ccc;
+  border-radius: 6px;
+  margin: 0rem 4rem 2rem 4rem;
+}
+
+.innerContainer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.buttonPadding {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hiddenForm {
+  display: none;
+}
+
+.imgBuffer {
+  margin-left: 8rem;
+  margin-top: 3rem;
+}
+
+.view-assignments-button {
+  color: white;
+  background-color: rgb(3, 33, 83);
+}
+
+.view-assignments-button:hover {
+  color: rgb(150, 192, 230);
+}
+
+.class-title,
+.class-score {
+  font-size: 26px;
+}
+
+#grades-title-card {
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  overflow: hidden;
+}
+
+#grades-title-card-content {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}

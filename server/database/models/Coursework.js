@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 var CourseworkSchema = new Schema({
   courseName: {
     type: String,
-    required: "className is Required"
+    required: "courseName is Required"
   },
   assignmentName: {
     type: String,
