@@ -6,7 +6,7 @@ router.route("/")
   .get(formsController.findAll)
 
 // Matches with "/user/form/:id"
-router.route("/:id")
+router.route("/:name")
   .get(formsController.findById)
   .put(formsController.update)
   .delete(formsController.remove);

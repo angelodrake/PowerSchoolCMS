@@ -97,9 +97,9 @@ class Grades extends Component {
                     </div>
                     <div className="column is-4">
                       <p className="view-assignments">
-                        <a className="button view-assignments-button">
+                        <span className="button view-assignments-button">
                           View Assignments
-                        </a>
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -123,9 +123,9 @@ class Grades extends Component {
                   </div>
                   <div className="column is-4">
                     <p className="view-assignments">
-                      <a className="button view-assignments-button">
+                      <span className="button view-assignments-button">
                         View Assignments
-                      </a>
+                      </span>
                     </p>
                   </div>
                 </div>
@@ -151,9 +151,9 @@ class Grades extends Component {
                   </div>
                   <div className="column is-4">
                     <p className="view-assignments">
-                      <a className="button view-assignments-button">
+                      <span className="button view-assignments-button">
                         View Assignments
-                      </a>
+                      </span>
                     </p>
                   </div>
                 </div>
@@ -182,9 +182,9 @@ class Grades extends Component {
                   </div>
                   <div className="column is-4">
                     <p className="view-assignments">
-                      <a className="button view-assignments-button">
+                      <span className="button view-assignments-button">
                         View Assignments
-                      </a>
+                      </span>
                     </p>
                   </div>
                 </div>

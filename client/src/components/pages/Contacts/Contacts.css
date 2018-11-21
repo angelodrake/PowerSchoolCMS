@@ -16,9 +16,15 @@ li {
 }
 
 .is-128x128 {
-  margin: 2%;
+  margin-left: 5%;
+  margin-bottom: 5%;
 }
 
 .card {
-  overflow: auto;
+  overflow: hidden;
+}
+
+.contacts-card-content {
+  padding-left: 0px;
+  padding-bottom: 0px;
 }
