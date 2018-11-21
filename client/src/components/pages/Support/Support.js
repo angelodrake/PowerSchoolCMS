@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import Column from '../../Grid/Column';
 import Columns from '../../Grid/Columns';
+import OpenSupportTickets from '../../OpenSupportTickets/OpenSupportTickets';
 import './Support.css';
 
 export default class Support extends React.Component {
@@ -35,7 +36,7 @@ export default class Support extends React.Component {
     return (
       <div>
         {loggedIn ? (
-          <Columns>
+          <Columns extras="is-centered">
             <Column size="is-three-fifths supportFormBuffer">
             <form>
               <div className="field inputStyles">
@@ -63,6 +64,8 @@ export default class Support extends React.Component {
                       <option value="tutoring">Tutoring</option>
                       <option value="loginIssues">Login Issues</option>
                       <option value="techSupport">Tech Support</option>
+                      <option value="requestAbsence">Request Absence</option>
+                      <option value="reschedule">Reschedule</option>
                     </select>
                   </div>
                 </div>
@@ -82,6 +85,9 @@ export default class Support extends React.Component {
                 </div>
               </div>
             </form>
+            </Column>
+            <Column>
+              <OpenSupportTickets questionCategory="Request Absence" questionText="I am requesting an absence for the 5th of December, I have a doctors appointment." />
             </Column>
           </Columns>
         ) : (

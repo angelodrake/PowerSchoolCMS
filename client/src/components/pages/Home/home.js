@@ -32,7 +32,7 @@ export default class Home extends Component {
               <Notifications />
             </Column>
             <Column>
-              <Upcoming day="Friday" month="November" dayNum="30" time="2nd Period" testName="Math III Final" />
+              <Upcoming day="Friday" month="November" dayNum="30" time="1st Period" testName="Math III Final" />
             </Column>
           </Columns>
         ) : (

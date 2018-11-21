@@ -2,10 +2,10 @@ import axios from 'axios';
 
 export default {
    
-    markAsSaved:function(name,data){
-        return axios.put("/user/api/form/"+name,data);
+    markAsSaved:function(id,data){
+        return axios.put("/api/form/"+id,data);
     },
     getAllForms: function(){
-        return axios.get("/user/api/form/");
+        return axios.get("/api/form/");
     }
 }

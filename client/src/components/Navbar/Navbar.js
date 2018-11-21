@@ -13,6 +13,7 @@ class Navbar extends Component {
       redirectTo: "/login"
     };
     this.logout = this.logout.bind(this);
+    this.alertPopout = this.alertPopout.bind(this);
   }
 
   logout(event) {
@@ -32,6 +33,10 @@ class Navbar extends Component {
       .catch(error => {
         console.log("Logout error");
       });
+  }
+
+  alertPopout() {
+
   }
 
   render() {
@@ -67,9 +72,14 @@ class Navbar extends Component {
             <div id="navbarBasicExample" className="navbar-menu">
               <div className="navbar-end">
                 <div className="rightBuffer navbar-item">
+                <div class="navbar-item has-dropdown is-hoverable">
                   <button className="navbar-item button iconFormat navItemSpacing">
                     <i className="fas fa-bell" />
                   </button>
+                  <div class="navbar-dropdown alertsStyles">
+                    {this.props.children}
+                  </div>
+                </div>
                   <div className="navbar-brand">
                     <Link
                       to="/support"
@@ -101,35 +111,6 @@ class Navbar extends Component {
           </div>
         )}
       </section>
-      // <div>
-      //   <header className="navbar App-header" id="nav-container">
-      //     <div className="col-4">
-      //       {loggedIn ? (
-      //         <section className="navbar-section">
-      //           <Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>
-      //             <span className="text-secondary">logout</span>
-      //           </Link>
-      //         </section>
-      //       ) : (
-      //         <section className="navbar-section">
-      //           <Link to="/" className="btn btn-link text-secondary">
-      //             <span className="text-secondary">home</span>
-      //           </Link>
-      //           <Link to="/login" className="btn btn-link text-secondary">
-      //             <span className="text-secondary">login</span>
-      //           </Link>
-      //           <Link to="/signup" className="btn btn-link">
-      //             <span className="text-secondary">sign up</span>
-      //           </Link>
-      //         </section>
-      //       )}
-      //     </div>
-      //     <div className="col-4 col-mr-auto">
-      //       <div id="top-filler" />
-      //       <h1 className="App-title">MERN Passport</h1>
-      //     </div>
-      //   </header>
-      // </div>
     );
   }
 }

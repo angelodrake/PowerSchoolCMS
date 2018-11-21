@@ -8,7 +8,8 @@ const dbConnection = require("./database");
 const MongoStore = require("connect-mongo")(session);
 const passport = require("./passport");
 const app = express();
-const API = require("./routes/");
+const userAPI = require("./routes/");
+const apiRoute = require("./routes/api");
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -33,7 +34,8 @@ app.use(passport.initialize());
 app.use(passport.session()); // calls the deserializeUser
 
 // Routes
-app.use('/user', API);
+app.use('/api',apiRoute);
+app.use('/user', userAPI);
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
