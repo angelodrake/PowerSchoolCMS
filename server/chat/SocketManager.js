@@ -1,6 +1,6 @@
 const io = require("../server.js").io;
 
-const { VERIFY_USER, USER_CONNECTED, LOGOUT } = require("../../client/src/components/Chat/Events");
+const { VERIFY_USER, USER_CONNECTED, MESSAGE_SENT, LOGOUT } = require("../../client/src/components/Chat/Events");
 const { createUser, createMessage, createChat } = require("./Factories");
 let connectedUsers = {};
 
@@ -22,6 +22,11 @@ module.exports = function(socket) {
     socket.user = user;
     io.emit(USER_CONNECTED, connectedUsers);
     console.log(connectedUsers);
+  });
+
+  //messaging
+  socket.on(MESSAGE_SENT, (req, res) => {
+    io.emit("sendMessage", req.body);
   });
 
   function isUser(userList, username) {
