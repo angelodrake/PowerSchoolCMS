@@ -12,6 +12,7 @@ import Forms from "./components/pages/Forms/Forms";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import Calendar from "./components/pages/Calendar";
+import Grades from "./components/pages/Grades";
 import "./App.css";
 
 class App extends Component {
@@ -97,7 +98,11 @@ class App extends Component {
           path="/calendar"
           render={() => <Calendar loggedIn={this.state.loggedIn} />}
         />
-
+        <Route
+          exact
+          path="/grades"
+          render={() => <Grades loggedIn={this.state.loggedIn} />}
+        />
         <Route
           path="/login"
           render={() => <LoginForm updateUser={this.updateUser} />}

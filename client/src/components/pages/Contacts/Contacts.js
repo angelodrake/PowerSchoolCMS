@@ -67,7 +67,7 @@ class Contacts extends Component {
                             <strong>Name:</strong> Ashli Crepsac
                           </li>
                           <li>
-                            <strong>Position:</strong> Teacher
+                            <strong>Position:</strong> Teacher,English
                           </li>
                           <li>
                             <strong>Email:</strong> Ashli.Crepsac@cms.k12.nc.us

@@ -1,0 +1,74 @@
+.grades-page-holder {
+  height: 100%;
+  width: calc(100%-14rem);
+  margin-left: 14rem;
+  background: linear-gradient(
+    45deg,
+    rgb(3, 33, 83) 0%,
+    rgb(150, 192, 230) 100%
+  );
+  padding: 3% 0px;
+  min-height: 100vh;
+}
+
+.separator {
+  border-right: solid 1px #ccc;
+  margin-left: 4rem;
+  margin-right: 3rem;
+}
+
+.formsBuffer {
+  margin: 3rem 5rem 3rem 15rem;
+}
+
+.subtext {
+  font-size: 10px;
+}
+
+.formsContainer {
+  border: solid 1px #ccc;
+  box-shadow: 1px 1px 4px #ccc;
+  border-radius: 6px;
+  margin: 4rem 4rem 4rem 4rem;
+}
+
+.innerContainer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.buttonPadding {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hiddenForm {
+  display: none;
+}
+
+.imgBuffer {
+  margin-left: 8rem;
+  margin-top: 3rem;
+}
+
+.grades-cards {
+  border: solid 1px #ccc;
+  box-shadow: 1px 1px 4px black;
+  border-radius: 6px;
+  margin: 4rem 4rem 4rem 4rem;
+  min-width: 350px;
+}
+
+.holder {
+  margin: auto;
+}
+
+.view-assignments-button {
+  color: white;
+  background-color: rgb(3, 33, 83);
+  margin-top: 5%;
+}
+
+.view-assignments-button:hover {
+  color: rgb(150, 192, 230);
+}
