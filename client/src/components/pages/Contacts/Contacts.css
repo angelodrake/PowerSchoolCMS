@@ -1,10 +1,4 @@
 .contacts-holder {
-  margin-left: 14rem;
-  background: linear-gradient(
-    45deg,
-    rgb(3, 33, 83) 0%,
-    rgb(150, 192, 230) 100%
-  );
   min-height: 100vh;
 }
 

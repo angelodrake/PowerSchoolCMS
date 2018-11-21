@@ -1,12 +1,5 @@
 .grades-page-holder {
   height: 100%;
-  width: calc(100%-14rem);
-  margin-left: 14rem;
-  background: linear-gradient(
-    45deg,
-    rgb(3, 33, 83) 0%,
-    rgb(150, 192, 230) 100%
-  );
   padding: 3% 0px;
   min-height: 100vh;
 }
@@ -25,11 +18,11 @@
   font-size: 10px;
 }
 
-.formsContainer {
+.grades-cards {
   border: solid 1px #ccc;
   box-shadow: 1px 1px 4px #ccc;
   border-radius: 6px;
-  margin: 4rem 4rem 4rem 4rem;
+  margin: 0rem 4rem 2rem 4rem;
 }
 
 .innerContainer {
@@ -51,24 +44,29 @@
   margin-top: 3rem;
 }
 
-.grades-cards {
-  border: solid 1px #ccc;
-  box-shadow: 1px 1px 4px black;
-  border-radius: 6px;
-  margin: 4rem 4rem 4rem 4rem;
-  min-width: 350px;
-}
-
-.holder {
-  margin: auto;
-}
-
 .view-assignments-button {
   color: white;
   background-color: rgb(3, 33, 83);
-  margin-top: 5%;
 }
 
 .view-assignments-button:hover {
   color: rgb(150, 192, 230);
+}
+
+.class-title,
+.class-score {
+  font-size: 26px;
+}
+
+#grades-title-card {
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  overflow: hidden;
+}
+
+#grades-title-card-content {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Grades.css";
 import { Redirect } from "react-router-dom";
 import grade from "./grade.json";
+import GradesTopInfo from "../../GradesTopInfo/GradesTopInfo";
 
 class Grades extends Component {
   state = {
@@ -50,157 +51,143 @@ class Grades extends Component {
       <div>
         {loggedIn ? (
           <div className="grades-page-holder">
-            <div className="columns grades-main-columns">
-              <div className="column is-6">
-                <div className="card grades-cards">
-                  <header className="card-header">
-                    <div className="holder course-name-holder">
-                      <h1 className="title is-1" id="class-title">
+            <GradesTopInfo />
+            <div className="card grades-cards" id="grades-title-card">
+              <div className="card-content" id="grades-title-card-content">
+                <div className="columns">
+                  <div className="column is-4">
+                    <strong>
+                      <p className="class-title">Class</p>
+                    </strong>
+                  </div>
+                  <div className="column is-4">
+                    <strong>
+                      <p className="class-score">Grade</p>
+                    </strong>
+                  </div>
+                  <div className="column is-4">
+                    <strong>
+                      {" "}
+                      <p className="class-score">Details</p>
+                    </strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card grades-cards">
+              <div className="card-content">
+                <div className="holder score-holder">
+                  <div className="columns">
+                    <div className="column is-4">
+                      <p className="class-title">
                         {this.state.english.length &&
                           this.state.english[0].courseName}
-                      </h1>
+                      </p>
                     </div>
-                  </header>
-                  <div className="card-content">
-                    <div className="holder score-holder">
-                      <div className="level is-mobile">
-                        <div className="level-item">
-                          <h1 className="title is-1" id="class-title">
-                            {this.state.english.length &&
-                              this.state.english[0].score}
-                            /
-                            {this.state.english.length &&
-                              this.calculateLetterGrade(
-                                this.state.english[0].score
-                              )}
-                          </h1>
-                        </div>
-                        <div className="level-item">
-                          <h1 className="title is-1" id="class-title">
-                            <a className="button view-assignments-button">
-                              View Assignments
-                            </a>
-                          </h1>
-                        </div>
-                      </div>
+                    <div className="column is-4">
+                      <p className="class-score">
+                        {this.state.english.length &&
+                          this.state.english[0].score}{" "}
+                        -{" "}
+                        {this.state.english.length &&
+                          this.calculateLetterGrade(
+                            this.state.english[0].score
+                          )}
+                      </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div className="column is-6">
-                <div className="card grades-cards">
-                  <header className="card-header">
-                    <div className="holder course-name-holder">
-                      <h1 className="title is-1" id="class-title">
-                        {this.state.math.length &&
-                          this.state.math[0].courseName}
-                      </h1>
-                    </div>
-                  </header>
-                  <div className="card-content">
-                    <div className="holder score-holder">
-                      <div className="level is-mobile">
-                        <div className="level-item">
-                          <h1 className="title is-1" id="class-title">
-                            {this.state.math.length && this.state.math[0].score}
-                            /A
-                          </h1>
-                        </div>
-                        <div className="level-item">
-                          <h1 className="title is-1" id="class-title">
-                            <a className="button view-assignments-button">
-                              View Assignments
-                            </a>
-                          </h1>
-                        </div>
-                      </div>
+                    <div className="column is-4">
+                      <p className="view-assignments">
+                        <a className="button view-assignments-button">
+                          View Assignments
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="columns">
-              <div className="column is-6">
-                <div className="card grades-cards">
-                  <header className="card-header">
-                    <div className="holder course-name-holder">
-                      <h1 className="title is-1" id="class-title">
-                        {this.state.biology.length &&
-                          this.state.biology[0].courseName}
-                      </h1>
-                    </div>
-                  </header>
-                  <div className="card-content">
-                    <div className="holder score-holder">
-                      <div className="level is-mobile">
-                        <div className="level-item">
-                          <h1 className="title is-1" id="class-title">
-                            {this.state.biology.length &&
-                              this.state.biology[0].score}
-                            /A
-                          </h1>
-                        </div>
-                        <div className="level-item">
-                          <h1 className="title is-1" id="class-title">
-                            <a className="button view-assignments-button">
-                              View Assignments
-                            </a>
-                          </h1>
-                        </div>
-                      </div>
-                    </div>
+            <div className="card grades-cards">
+              <div className="card-content">
+                <div className="columns">
+                  <div className="column is-4">
+                    <p className="class-title">
+                      {this.state.math.length && this.state.math[0].courseName}
+                    </p>
                   </div>
-                </div>
-              </div>
-              <div className="column is-6">
-                <div className="card grades-cards">
-                  <header className="card-header">
-                    <div className="holder course-name-holder">
-                      <h1 className="title is-1" id="class-title">
-                        {this.state.geography.length &&
-                          this.state.geography[0].courseName}
-                      </h1>
-                    </div>
-                  </header>
-                  <div className="card-content">
-                    <div className="holder score-holder">
-                      <div className="level is-mobile">
-                        <div className="level-item">
-                          <h1 className="title is-1" id="class-title">
-                            {this.state.geography.length &&
-                              this.state.geography[0].score}
-                            /A
-                          </h1>
-                        </div>
-                        <div className="level-item">
-                          <h1 className="title is-1" id="class-title">
-                            <a className="button view-assignments-button">
-                              View Assignments
-                            </a>
-                          </h1>
-                        </div>
-                      </div>
-                    </div>
+                  <div className="column is-4">
+                    <p className="class-score">
+                      {this.state.math.length && this.state.math[0].score} -{" "}
+                      {this.state.math.length &&
+                        this.calculateLetterGrade(this.state.math[0].score)}
+                    </p>
+                  </div>
+                  <div className="column is-4">
+                    <p className="view-assignments">
+                      <a className="button view-assignments-button">
+                        View Assignments
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="modal">
-              <div className="modal-background" />
-              <div className="modal-card">
-                <header className="modal-card-head">
-                  <p className="modal-card-title">Modal title</p>
-                  <button className="delete" aria-label="close" />
-                </header>
-                <section className="modal-card-body">
-                  {this.state.math.map(assignment => (
-                    <h1 className="title">{assignment.assignmentName}</h1>
-                  ))}
-                </section>
-                <footer className="modal-card-foot">
-                  <button className="button is-success">Save changes</button>
-                  <button className="button">Cancel</button>
-                </footer>
+            <div className="card grades-cards">
+              <div className="card-content">
+                <div className="columns">
+                  <div className="column is-4">
+                    <p className="class-title">
+                      {this.state.biology.length &&
+                        this.state.biology[0].courseName}
+                    </p>
+                  </div>
+
+                  <div className="column is-4">
+                    <p className="class-score">
+                      {this.state.biology.length && this.state.biology[0].score}{" "}
+                      -{" "}
+                      {this.state.biology.length &&
+                        this.calculateLetterGrade(this.state.biology[0].score)}
+                    </p>
+                  </div>
+                  <div className="column is-4">
+                    <p className="view-assignments">
+                      <a className="button view-assignments-button">
+                        View Assignments
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card grades-cards">
+              <div className="card-content">
+                <div className="columns">
+                  <div className="column is-4">
+                    <p className="class-title">
+                      {this.state.geography.length &&
+                        this.state.geography[0].courseName}
+                    </p>
+                  </div>
+
+                  <div className="column is-4">
+                    <p className="class-score">
+                      {this.state.geography.length &&
+                        this.state.geography[0].score}{" "}
+                      -{" "}
+                      {this.state.geography.length &&
+                        this.calculateLetterGrade(
+                          this.state.geography[0].score
+                        )}
+                    </p>
+                  </div>
+                  <div className="column is-4">
+                    <p className="view-assignments">
+                      <a className="button view-assignments-button">
+                        View Assignments
+                      </a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Route, Link } from "react-router-dom";
 // components
-import Signup from "./components/sign-up";
-import LoginForm from "./components/login-form";
+import Signup from "./components/pages/SignUp/SignUp";
+import LoginForm from "./components/pages/LoginForm/LoginForm";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/pages/Home/home";
 import Contacts from "./components/pages/Contacts";
@@ -13,6 +13,7 @@ import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import Calendar from "./components/pages/Calendar";
 import Grades from "./components/pages/Grades";
+import Attendance from "./components/pages/Attendance/Attendance";
 import "./App.css";
 
 class App extends Component {
@@ -66,49 +67,61 @@ class App extends Component {
         <a href="" className="button is-loading is-white is-center is-large" />
       </div>
     ) : (
-      <div className="App">
-        <div className="mainContent">
-          <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-          <Route
-            exact
-            path="/"
-            render={() => <Home loggedIn={this.state.loggedIn} />}
-          />
-          <Route
-            exact
-            path="/support"
-            render={() => <Support loggedIn={this.state.loggedIn} />}
-          />
-          <Route
-            exact
-            path="/forms"
-            render={() => <Forms loggedIn={this.state.loggedIn} />}
-          />
+      <div>
+        <div className="App">
+          <div className="mainContent">
+            <Navbar
+              updateUser={this.updateUser}
+              loggedIn={this.state.loggedIn}
+            />
+            <Route
+              exact
+              path="/"
+              render={() => <Home loggedIn={this.state.loggedIn} />}
+            />
+            <Route
+              exact
+              path="/support"
+              render={() => <Support loggedIn={this.state.loggedIn} />}
+            />
+            <Route
+              exact
+              path="/forms"
+              render={() => <Forms loggedIn={this.state.loggedIn} />}
+            />
+            <Route
+              exact
+              path="/attendance"
+              render={() => <Attendance loggedIn={this.state.loggedIn} />}
+            />
+            <Route
+              exact
+              path="/contacts"
+              render={() => <Contacts loggedIn={this.state.loggedIn} />}
+            />
+            <Route
+              exact
+              path="/calendar"
+              render={() => <Calendar loggedIn={this.state.loggedIn} />}
+            />
+            <Route
+              exact
+              path="/grades"
+              render={() => <Grades loggedIn={this.state.loggedIn} />}
+            />
+          </div>
+          <div className="sidebar">
+            <SideBar loggedIn={this.state.loggedIn} />
+          </div>
+          <Footer loggedIn={this.state.loggedIn} />
         </div>
-        <div className="sidebar">
-          <SideBar loggedIn={this.state.loggedIn} />
+        <div>
+          <Route
+            path="/login"
+            render={() => <LoginForm updateUser={this.updateUser} />}
+          />
+          <Route path="/signup" render={() => <Signup />} />
         </div>
-        <Route
-          exact
-          path="/contacts"
-          render={() => <Contacts loggedIn={this.state.loggedIn} />}
-        />
-        <Route
-          exact
-          path="/calendar"
-          render={() => <Calendar loggedIn={this.state.loggedIn} />}
-        />
-        <Route
-          exact
-          path="/grades"
-          render={() => <Grades loggedIn={this.state.loggedIn} />}
-        />
-        <Route
-          path="/login"
-          render={() => <LoginForm updateUser={this.updateUser} />}
-        />
-        <Route path="/signup" render={() => <Signup />} />
-        <Footer loggedIn={this.state.loggedIn} />
       </div>
     );
   }

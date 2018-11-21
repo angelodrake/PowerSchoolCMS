@@ -1,9 +1,6 @@
-.sidebar {
-
-}
-
 .mainContent {
   margin-left: 14rem;
+  flex: 1 0 auto;
 }
 
 .is-loading {
