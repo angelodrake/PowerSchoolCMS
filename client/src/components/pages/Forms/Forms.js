@@ -3,43 +3,60 @@ import { Redirect, Link } from 'react-router-dom';
 import Column from '../../Grid/Column';
 import Columns from '../../Grid/Columns';
 import './Forms.css';
-import forms from './form.json';
 import {
-  Button,
   Modal,
   ModalHeader,
   ModalBody,
-  Form,
-  FormGroup,
-  Label,
-  Input
 } from 'reactstrap';
+import API from '../../../utils/API'
+
+
 
 export default class Forms extends React.Component {
   state = {
     redirectTo: "/login",
-    model: false,
-    remarks: "",
-    signature: ""
+    forms: [],
+    modal: false,
+    imgUrl: "",
+    imgName: "",
+    isRead: false
   }
 
-  toggle = () => {
+  toggle = (e) => {
+    e.preventDefault();
     this.setState({
-      modal: !this.state.modal
+      modal: !this.state.modal,
+      imgUrl: e.target.value,
+      imgName: e.target.name
     })
   }
 
-  onChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
+  componentDidMount() {
+    this.loadAllForms()
+  };
+
+  loadAllForms = () => {
+    API.getAllForms()
+      .then(res => {
+        this.setState({ forms: res.data })
+        console.log(this.state.forms)
+      }
+      )
+      .catch(err => console.log(err));
   }
 
-  onSubmit = e => {
-    e.preventDefault();
-    const newItem = {
-      name: this.state.name
+  handleAsRead = (name) => {
+
+    const readForm = {
+      isRead: true
     }
-    this.props.addItem(newItem);
-    this.toggle();
+
+    API.markAsSaved(name, readForm)
+      .then(res => {
+        this.loadAllForms()
+      })
+      .catch(err => console.log(err));
+    console.log(readForm)
   }
 
 
@@ -51,60 +68,52 @@ export default class Forms extends React.Component {
           <div>
             <Columns>
               <Column size="is-three-fifths formsBuffer">
-                {forms.map(forms => (
+                {this.state.forms.map(forms => (
                   <div className="formsContainer">
                     <div className="innerContainer">
                       <div className="has-text-centered">
-                        <span className="boldSpan">{forms.name}</span>
+                        <span className="boldSpan">{forms.name}</span><br />
+                        <span className="boldSpan">Date: {forms.dateExpire}</span>
                       </div>
                       <div className="break"></div>
                       <div className="field is-grouped is-grouped-centered formButtons">
                         <div className="control">
                           <button className="button is-link"
-                            value={forms.name}
+                            value={forms.imgUrl}
+                            name={forms.name}
                             onClick={this.toggle}
-                          >View and Sign Form</button>
+                          >View Form</button>
                         </div>
                         <div className="separator"></div>
-                        <div className="date1">
-                          <span className="boldSpan">Date: {forms.date}</span>
-                        </div>
+                        {!forms.isRead ? (
+                          <div className="control">
+                            <button className="button danger"
+                              name={forms.name}
+                              onClick={() => this.handleAsRead(forms.name)}
+                            >Click to mark as Read</button>
+                          </div>
+                        ) : (
+                            <span className="boldSpan">Marked As Read</span>
+                          )}
+
                       </div>
                     </div>
                   </div>
                 ))}
+
+                <Modal isOpen={this.state.modal}
+                  toggle={this.toggle}
+                >
+                  <ModalHeader toggle={this.toggle}
+                  >{this.state.imgName}
+                  </ModalHeader>
+                  <ModalBody>
+                    <a href={this.state.imgUrl} target='_blank'>
+                      <img src={this.state.imgUrl} alt={this.state.imgName} /></a>
+                  </ModalBody>
+                </Modal>
               </Column>
             </Columns>
-
-            <Modal isOpen={this.state.modal}
-              toggle={this.toggle}
-            >
-              <ModalHeader toggle={this.toggle}
-              >Add to shoppping list
-                    </ModalHeader>
-              <ModalBody>
-                <Form onSubmit={this.onSubmit}>
-                  <FormGroup>
-                    <Label for="item">Item</Label>
-                    <Input
-                      type="text"
-                      name="name"
-                      placeholder="add shopping item"
-                      onChange={this.onChange}
-                    />
-                    <Button
-                      color="dark"
-                      style={{ marginTop: '2rem' }}
-                      block
-                    >
-                      Add Item
-                            </Button>
-                  </FormGroup>
-                </Form>
-              </ModalBody>
-            </Modal>
-
-
           </div>
         ) : (
             <div>

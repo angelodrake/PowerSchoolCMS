@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new CourseworkSchema object
 var FormSchema = new Schema({
-  subject: {
+  name: {
     type: String
     // ,
     // required: "sub is Required"
@@ -13,8 +13,8 @@ var FormSchema = new Schema({
   date: {
     type: Date
   },
-  text: {
-    type: String
+  isRead: {
+    type: Boolean
     // ,
     // required: "Subject is Required"
   }
