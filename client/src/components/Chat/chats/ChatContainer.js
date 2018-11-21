@@ -47,6 +47,7 @@ class ChatContainer extends Component {
           style={{ height: 60, width: "90%" }}
         />
         <button onClick={this.send.bind(this)}>Send</button>
+        <button onClick={this.props.logout}>Logout</button>
       </div>
     );
   }
