@@ -15,8 +15,7 @@ class example extends Component {
         let assignmentArray = this.props.info.subject.filter(item => Object.keys(item).includes('score'))
         this.setState({
             assignment: assignmentArray
-        }
-        )
+        },()=>(console.log(this.state.assignment)))
     }
 
     render() {
@@ -30,24 +29,41 @@ class example extends Component {
                     >View Assignments
                      </span>
                 </p>
+                
 
                 <Collapse
-                    name={this.props.info.courseName}
+                   
                     isOpen={this.state.isCollapse}>
                     <Card>
                         <CardBody>
-                            {this.props.info.courseName}
-
+                        <div className="columns">
+                                    <div className="column is-4">
+                                        Assignment
+                                    </div>
+                                    <div className="column is-3">
+                                        Date
+                                    </div>
+                                    <div className="column is-2">
+                                       Score
+                                    </div>
+                                    <div className="column is-3">
+                                        Category
+                                    </div>
+                                </div>
+                            <hr/>
                             {this.state.assignment.map(assignment => (
-                                <div>
-                                    <div>
+                                <div className="columns">
+                                    <div className="column is-4">
                                         {assignment.assignmentName}
                                     </div>
-                                    <div>
+                                    <div className="column is-3">
                                         {assignment.date}
                                     </div>
-                                    <div>
+                                    <div className="column is-2">
                                         {assignment.score}
+                                    </div>
+                                    <div className="column is-3">
+                                        {assignment.category}
                                     </div>
                                 </div>
                             ))}
