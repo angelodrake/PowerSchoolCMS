@@ -12,6 +12,7 @@ import Support from "./components/pages/Support/Support";
 import Forms from "./components/pages/Forms/Forms";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
+import Chat from "./components/Chat/chat";
 import Calendar from "./components/pages/Calendar";
 import FormalDetails from "./components/pages/FormalDetails/FormalDetails";
 import Alerts from "./components/Alerts/Alerts";
@@ -77,36 +78,12 @@ class App extends Component {
               <Alerts alertText="Graded: Homework #7 has been graded!" />
               <Alerts alertText="Homework #8: Due: Dec 6th at 11:59pm" />
             </Navbar>
-            <Route
-              exact
-              path="/"
-              render={() => <Home loggedIn={this.state.loggedIn} />}
-            />
-            <Route
-              exact
-              path="/support"
-              render={() => <Support loggedIn={this.state.loggedIn} />}
-            />
-            <Route
-              exact
-              path="/forms"
-              render={() => <Forms loggedIn={this.state.loggedIn} />}
-            />
-            <Route
-              exact
-              path="/attendance"
-              render={() => <Attendance loggedIn={this.state.loggedIn} />}
-            />
-            <Route
-              exact
-              path="/contacts"
-              render={() => <Contacts loggedIn={this.state.loggedIn} />}
-            />
-            <Route
-              exact
-              path="/calendar"
-              render={() => <Calendar loggedIn={this.state.loggedIn} />}
-            />
+            <Route exact path="/" render={() => <Home loggedIn={this.state.loggedIn} />} />
+            <Route exact path="/support" render={() => <Support loggedIn={this.state.loggedIn} />} />
+            <Route exact path="/forms" render={() => <Forms loggedIn={this.state.loggedIn} />} />
+            <Route exact path="/attendance" render={() => <Attendance loggedIn={this.state.loggedIn} />} />
+            <Route exact path="/contacts" render={() => <Contacts loggedIn={this.state.loggedIn} />} />
+            <Route exact path="/calendar" render={() => <Calendar loggedIn={this.state.loggedIn} />} />
             <Route
               exact
               path="/formal-details"
@@ -211,26 +188,17 @@ class App extends Component {
                 />
               )}
             />
-            <Route
-              exact
-              path="/grades"
-              render={() => <Grades loggedIn={this.state.loggedIn} />}
-            />
+            <Route exact path="/grades" render={() => <Grades loggedIn={this.state.loggedIn} />} />
           </div>
           <div className="sidebar">
-            <SideBar
-              loggedIn={this.state.loggedIn}
-              currentUser={this.state.username}
-            />
+            <SideBar loggedIn={this.state.loggedIn} currentUser={this.state.username} />
           </div>
           <Footer loggedIn={this.state.loggedIn} />
         </div>
         <div>
-          <Route
-            path="/login"
-            render={() => <LoginForm updateUser={this.updateUser} />}
-          />
+          <Route path="/login" render={() => <LoginForm updateUser={this.updateUser} />} />
           <Route path="/signup" render={() => <Signup />} />
+          <Route path="/chat" render={() => <Chat title="Chat App Screen" />} />
         </div>
       </div>
     );
