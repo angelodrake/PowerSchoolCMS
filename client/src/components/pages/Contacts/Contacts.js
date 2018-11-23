@@ -22,8 +22,8 @@ class Contacts extends Component {
             <div className="contacts-columns-container">
               <div className="columns">
                 <div className="column is-6">
-                  <div className="card">
-                    <div className="columns">
+                  <div className="card contact-card">
+                    <div className="columns is-vcentered">
                       <div className="column is-4">
                         <div className="card-image">
                           <figure className="image">
@@ -37,28 +37,26 @@ class Contacts extends Component {
                       </div>
                       <div className="column is-8">
                         <div className="card-content contacts-card-content">
-                          <div className="content">
-                            <ul>
-                              <li>
-                                <strong>Name:</strong> Tracey Pickard
-                              </li>
-                              <li>
-                                <strong>Position:</strong> Principal
-                              </li>
-                              <li>
-                                <strong>Email:</strong>{" "}
-                                Tracey.Pickard@cms.k12.nc.us
-                              </li>
-                            </ul>
-                          </div>
+                          <ul>
+                            <li className="contact-card-li">
+                              <strong>Name:</strong> Tracey Pickard
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Position:</strong> Principal
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Email:</strong>{" "}
+                              Tracey.Pickard@cms.k12.nc.us
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="column is-6">
-                  <div className="card">
-                    <div className="columns">
+                  <div className="card contact-card">
+                    <div className="columns is-vcentered">
                       <div className="column is-4">
                         <div className="card-image">
                           <figure className="image">
@@ -72,20 +70,18 @@ class Contacts extends Component {
                       </div>
                       <div className="column is-8">
                         <div className="card-content contacts-card-content">
-                          <div className="content">
-                            <ul>
-                              <li>
-                                <strong>Name:</strong> Ashli Crepsac
-                              </li>
-                              <li>
-                                <strong>Position:</strong> Teacher,English
-                              </li>
-                              <li>
-                                <strong>Email:</strong>{" "}
-                                Ashli.Crepsac@cms.k12.nc.us
-                              </li>
-                            </ul>
-                          </div>
+                          <ul>
+                            <li className="contact-card-li">
+                              <strong>Name:</strong> Ashli Crepsac
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Position:</strong> Teacher,English
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Email:</strong>{" "}
+                              Ashli.Crepsac@cms.k12.nc.us
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -94,8 +90,8 @@ class Contacts extends Component {
               </div>
               <div className="columns">
                 <div className="column is-6">
-                  <div className="card">
-                    <div className="columns">
+                  <div className="card contact-card">
+                    <div className="columns is-vcentered">
                       <div className="column is-4">
                         <div className="card-image">
                           <figure className="image">
@@ -109,28 +105,26 @@ class Contacts extends Component {
                       </div>
                       <div className="column is-8">
                         <div className="card-content contacts-card-content">
-                          <div className="content">
-                            <ul>
-                              <li>
-                                <strong>Name:</strong> David Vazquez
-                              </li>
-                              <li>
-                                <strong>Position:</strong> Teacher, Math
-                              </li>
-                              <li>
-                                <strong>Email:</strong>{" "}
-                                David.Vazquez@cms.k12.nc.us
-                              </li>
-                            </ul>
-                          </div>
+                          <ul>
+                            <li className="contact-card-li">
+                              <strong>Name:</strong> David Vazquez
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Position:</strong> Teacher, Math
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Email:</strong>{" "}
+                              David.Vazquez@cms.k12.nc.us
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="column is-6">
-                  <div className="card">
-                    <div className="columns">
+                  <div className="card contact-card">
+                    <div className="columns is-vcentered">
                       <div className="column is-4">
                         <div className="card-image">
                           <figure className="image">
@@ -144,20 +138,18 @@ class Contacts extends Component {
                       </div>
                       <div className="column is-8">
                         <div className="card-content contacts-card-content">
-                          <div className="content">
-                            <ul>
-                              <li>
-                                <strong>Name:</strong> Robert Altenhof
-                              </li>
-                              <li>
-                                <strong>Position:</strong> Teacher, History
-                              </li>
-                              <li>
-                                <strong>Email:</strong>{" "}
-                                Robert.Altenhof@cms.k12.nc.us
-                              </li>
-                            </ul>
-                          </div>
+                          <ul>
+                            <li className="contact-card-li">
+                              <strong>Name:</strong> Robert Altenhof
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Position:</strong> Teacher, History
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Email:</strong>{" "}
+                              Robert.Altenhof@cms.k12.nc.us
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -166,8 +158,8 @@ class Contacts extends Component {
               </div>
               <div className="columns">
                 <div className="column is-6">
-                  <div className="card">
-                    <div className="columns">
+                  <div className="card contact-card">
+                    <div className="columns is-vcentered">
                       <div className="column is-4">
                         <div className="card-image">
                           <figure className="image">
@@ -181,28 +173,25 @@ class Contacts extends Component {
                       </div>
                       <div className="column is-8">
                         <div className="card-content contacts-card-content">
-                          <div className="content">
-                            <ul>
-                              <li>
-                                <strong>Name:</strong> Tricia Wood
-                              </li>
-                              <li>
-                                <strong>Position:</strong> Teacher, Science
-                              </li>
-                              <li>
-                                <strong>Email:</strong>{" "}
-                                Tricia.Wood@cms.k12.nc.us
-                              </li>
-                            </ul>
-                          </div>
+                          <ul>
+                            <li className="contact-card-li">
+                              <strong>Name:</strong> Tricia Wood
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Position:</strong> Teacher, Science
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Email:</strong> Tricia.Wood@cms.k12.nc.us
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="column is-6">
-                  <div className="card">
-                    <div className="columns">
+                  <div className="card contact-card">
+                    <div className="columns is-vcentered">
                       <div className="column is-4">
                         <div className="card-image">
                           <figure className="image">
@@ -216,20 +205,18 @@ class Contacts extends Component {
                       </div>
                       <div className="column is-8">
                         <div className="card-content contacts-card-content">
-                          <div className="content">
-                            <ul>
-                              <li>
-                                <strong>Name:</strong> Lakeisha Dennis
-                              </li>
-                              <li>
-                                <strong>Position:</strong> Counselor
-                              </li>
-                              <li>
-                                <strong>Email:</strong>{" "}
-                                Lakeisha.Dennis@cms.k12.nc.us
-                              </li>
-                            </ul>
-                          </div>
+                          <ul>
+                            <li className="contact-card-li">
+                              <strong>Name:</strong> Lakeisha Dennis
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Position:</strong> Counselor
+                            </li>
+                            <li className="contact-card-li">
+                              <strong>Email:</strong>{" "}
+                              Lakeisha.Dennis@cms.k12.nc.us
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
