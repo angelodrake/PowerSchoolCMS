@@ -14,14 +14,11 @@ class Grades extends Component {
     biology: [],
     geography: [],
     grade,
-    newGradebook: []
+    newGradebook: [],
+    avg: []
   };
 
   componentDidMount() {
-    this.initializeGradebook()
-  }
-
-  initializeGradebook = () => {
     this.groupCoursebook(grade, 'courseName')
   }
 
@@ -32,7 +29,9 @@ class Grades extends Component {
       if (!reconstructedGradebook[key]) {
         reconstructedGradebook[key] = [];
       }
-      reconstructedGradebook[key].push(assignment);
+      if (!reconstructedGradebook[key].includes(assignment)) {
+        reconstructedGradebook[key].push(assignment);
+      }
       return reconstructedGradebook;
     })
 
@@ -49,16 +48,26 @@ class Grades extends Component {
     let avgScoreArray = [];
 
     for (var i = 0; i < allHomework.length; i++) {
+      let filtered = allHomework[i].filter(item => Object.keys(item).includes('score'))
+      let sum = filtered
+        .reduce(function (sum, assignment) {
+          return sum + assignment.score;
+        }, 0);
+      const average = Math.round(sum / filtered.length);
+      avgScoreArray.push(average)
+
+      this.setState({ avg: avgScoreArray }, () => console.log(this.state.avg))
+    }
+
+    for (var i = 0; i < allHomework.length; i++) {
       let sum = allHomework[i].reduce(function (sum, assignment) {
         return sum + assignment.score;
       }, 0);
       const average = Math.round(sum / allHomework[i].length);
       avgScoreArray.push(average)
-
+      avgScoreArray.splice(allHomework.length)
       this.setState({ avg: avgScoreArray })
     }
-
-    console.log(avgScoreArray)
 
     let refinedGrade = allHomework.slice()
 
@@ -67,9 +76,9 @@ class Grades extends Component {
         refinedGrade[i].unshift({ average: avgScoreArray[i] })
       }
 
-
     }
-    this.setState({ newGradebook: refinedGrade }, () => (console.log(JSON.stringify(this.state.newGradebook))))
+    this.setState({ newGradebook: refinedGrade },
+      () => (console.log(JSON.stringify(this.state.newGradebook))))
   }
 
   calculateLetterGrade = numGrade => {
@@ -89,7 +98,9 @@ class Grades extends Component {
       <div>
         {loggedIn ? (
           <div className="grades-page-holder">
-            <GradesTopInfo />
+            <GradesTopInfo
+              totalScore={this.state.avg.reduce((a,b)=>(a+b),0)}
+              numClass={this.state.avg.length} />
             <div className="card grades-cards" id="grades-title-card">
               <div className="card-content" id="grades-title-card-content">
                 <div className="columns">
