@@ -1,7 +1,7 @@
 .bottom-logo {
-  width: 30px;
+  width: 45px;
   background-color: white;
-  margin: 5px 5px 0px 5px;
+  margin: 5px 5px 5px 5px;
 }
 
 footer {
@@ -10,6 +10,7 @@ footer {
   margin-left: 14rem;
   margin-top: 4rem;
   width: 85vw;
+  height: 50px;
 }
 
 @media (max-width: 1087.5px) {
