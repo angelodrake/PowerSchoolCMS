@@ -13,11 +13,9 @@ class example extends Component {
             isCollapse: !this.state.isCollapse
         });
         let assignmentArray = this.props.info.subject.filter(item => Object.keys(item).includes('score'))
-        // console.log('this is' + JSON.stringify(assignmentArray))
         this.setState({
             assignment: assignmentArray
         }
-        // , () => console.log(this.state.assignment)
         )
     }
 
@@ -33,34 +31,32 @@ class example extends Component {
                      </span>
                 </p>
 
-                <div className="card grades-cards" style={{ width: '100vw' }}>
+                <Collapse
+                    name={this.props.info.courseName}
+                    isOpen={this.state.isCollapse}>
+                    <Card>
+                        <CardBody>
+                            {this.props.info.courseName}
 
-                    <Collapse
-                        name={this.props.info.courseName}
-                        isOpen={this.state.isCollapse}>
-                        <Card>
-                            <CardBody>
-                                {this.props.info.courseName}
-
-                                {this.state.assignment.map(assignment => (
+                            {this.state.assignment.map(assignment => (
+                                <div>
                                     <div>
-                                        <div>
-                                            {assignment.assignmentName}
-                                        </div>
-                                        <div>
-                                            {assignment.date}
-                                        </div>
-                                        <div>
-                                            {assignment.score}
-                                        </div>
+                                        {assignment.assignmentName}
                                     </div>
-                                ))}
+                                    <div>
+                                        {assignment.date}
+                                    </div>
+                                    <div>
+                                        {assignment.score}
+                                    </div>
+                                </div>
+                            ))}
 
-                            </CardBody>
-                        </Card>
-                    </Collapse>
-                </div>
+                        </CardBody>
+                    </Card>
+                </Collapse>
             </div>
+
         )
     }
 
