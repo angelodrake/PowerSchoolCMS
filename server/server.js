@@ -45,6 +45,7 @@ app.use(passport.session()); //Checks user session in local strat
 app.use("/user", API);
 app.post("/getMessage", (req, res) => {
   io.emit("sendMessage", req.body);
+  res.status(200).send("success");
 });
 
 app.use("/api", apiRoute);

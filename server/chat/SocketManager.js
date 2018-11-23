@@ -1,7 +1,7 @@
 const io = require("../server.js").io;
 
 const { VERIFY_USER, USER_CONNECTED, USER_DISCONNECTED, LOGOUT } = require("../../client/src/components/Chat/Events");
-const { createUser, createMessage, createChat } = require("./Factories");
+const { createUser } = require("./Factories");
 let connectedUsers = {};
 
 module.exports = function(socket) {

@@ -12,7 +12,8 @@ class ChatContainer extends Component {
     super(props);
     this.state = {
       messages: [],
-      activeChat: null
+      activeChat: null,
+      text: ""
     };
   }
   componentDidMount() {
@@ -27,6 +28,8 @@ class ChatContainer extends Component {
     const { user } = this.props;
     console.log(user);
     axios.post("getMessage", { text: user.name + ": " + this.state.text });
+    this.setState({ text: "" });
+    this.todoTextElem.value = "";
   }
 
   render() {
@@ -39,6 +42,7 @@ class ChatContainer extends Component {
           })}
         </div>
         <input
+          ref={el => (this.todoTextElem = el)}
           type="text"
           placeholder="message ..."
           onChange={val => {
