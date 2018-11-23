@@ -18,7 +18,7 @@ export default class Forms extends React.Component {
     redirectTo: "/login",
     forms: [],
     modal: false,
-    _id:"",
+    _id: "",
     imgUrl: "",
     imgName: "",
     isRead: false
@@ -48,11 +48,9 @@ export default class Forms extends React.Component {
   }
 
   handleAsRead = (id) => {
-
     const readForm = {
       isRead: true
     }
-
     API.markAsSaved(id, readForm)
       .then(res => {
         this.loadAllForms()
@@ -60,7 +58,6 @@ export default class Forms extends React.Component {
       .catch(err => console.log(err));
     console.log(this.state)
   }
-
 
   render() {
     const loggedIn = this.props.loggedIn;
@@ -89,13 +86,20 @@ export default class Forms extends React.Component {
                         <div className="separator"></div>
                         {!forms.isRead ? (
                           <div className="control">
-                            <button className="button danger"
+                            <span className="button danger"
                               name={forms.name}
                               onClick={() => this.handleAsRead(forms._id)}
-                            >Click to mark as Read</button>
+                            >Click to mark as Read</span>
                           </div>
                         ) : (
-                            <span className="boldSpan">Marked As Read</span>
+                            <span className="boldSpan" style={{color:'green'}}>
+                              <i
+                                className="fa fa-check-square"
+                                aria-hidden="true"
+                                style={{marginRight: 1 + 'em'}}
+                              />Marked As Read
+                              
+                              </span>
                           )}
 
                       </div>

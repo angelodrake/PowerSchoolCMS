@@ -1,7 +1,14 @@
 import React from "react";
 import "./GradesTopInfo.css";
 
+
 const GradesTopInfo = props => {
+  console.log(props.totalScore)
+console.log(props.numClass)
+
+
+let avg = Math.round(props.totalScore/props.numClass/2.5)/10
+console.log(avg)
   return (
     <div className="level">
       <div className="level-item">
@@ -9,7 +16,7 @@ const GradesTopInfo = props => {
           <div className="grades-top-info-card-content card-content">
             <p className="subtitle has-text-centered ">GPA</p>
             <p className="title is-1 has-text-centered grades-top-info-title">
-              3.28
+              {avg}
             </p>
           </div>
         </div>
