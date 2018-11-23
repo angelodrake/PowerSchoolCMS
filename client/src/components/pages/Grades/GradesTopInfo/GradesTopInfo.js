@@ -26,7 +26,7 @@ console.log(avg)
           <div className="grades-top-info-card-content card-content">
             <p className="subtitle has-text-centered">Missing Assignments</p>
             <p className="title is-1 has-text-centered grades-top-info-title">
-              0
+              The missing assignment are posted below so any recommandation for this area?
             </p>
           </div>
         </div>
