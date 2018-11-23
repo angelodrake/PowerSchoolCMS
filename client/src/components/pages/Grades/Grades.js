@@ -9,21 +9,18 @@ import Collapse from "./Collapse";
 class Grades extends Component {
   state = {
     redirectTo: "/login",
-    english: [],
-    math: [],
-    biology: [],
-    geography: [],
     grade,
     newGradebook: [],
     avg: []
   };
 
   componentDidMount() {
+    //input array from json and group them by 'courseName'
     this.groupCoursebook(grade, 'courseName')
   }
 
   groupCoursebook = (GradeFromJson, groupProperty) => {
-
+    // Grouping logic, refer to W3School .reduce 
     GradeFromJson.reduce((reconstructedGradebook, assignment) => {
       let key = assignment[groupProperty];
       if (!reconstructedGradebook[key]) {
@@ -34,7 +31,7 @@ class Grades extends Component {
       }
       return reconstructedGradebook;
     })
-
+    // remove the unwanted key:values in 0th index
     delete GradeFromJson[0].id;
     delete GradeFromJson[0].courseName;
     delete GradeFromJson[0].assignmentName;
@@ -43,11 +40,13 @@ class Grades extends Component {
     delete GradeFromJson[0].score;
     delete GradeFromJson[0].category;
 
+    //duplicate the target key:value to an array
     let allHomework = Object.values(GradeFromJson[0])
 
+    // average calculation
     let avgScoreArray = [];
-
     for (var i = 0; i < allHomework.length; i++) {
+      //react screws things when re-visit the page, avoid re-pushing
       let filtered = allHomework[i].filter(item => Object.keys(item).includes('score'))
       let sum = filtered
         .reduce(function (sum, assignment) {
@@ -55,32 +54,25 @@ class Grades extends Component {
         }, 0);
       const average = Math.round(sum / filtered.length);
       avgScoreArray.push(average)
-
+      //set to this.state
       this.setState({ avg: avgScoreArray }, () => console.log(this.state.avg))
     }
 
-    for (var i = 0; i < allHomework.length; i++) {
-      let sum = allHomework[i].reduce(function (sum, assignment) {
-        return sum + assignment.score;
-      }, 0);
-      const average = Math.round(sum / allHomework[i].length);
-      avgScoreArray.push(average)
-      avgScoreArray.splice(allHomework.length)
-      this.setState({ avg: avgScoreArray })
-    }
-
+    //make a copy
     let refinedGrade = allHomework.slice()
-
+    // push the average score as the 0th assignment
     for (var i = 0; i < refinedGrade.length; i++) {
-      if (!isNaN(avgScoreArray[0])) {
+      let key = refinedGrade[i];
+      if (
+        !Object.keys(key[0]).includes('average')) {
         refinedGrade[i].unshift({ average: avgScoreArray[i] })
       }
-
     }
     this.setState({ newGradebook: refinedGrade },
       () => (console.log(JSON.stringify(this.state.newGradebook))))
   }
 
+  //Jeremiah's gradeconversion
   calculateLetterGrade = numGrade => {
     let letterGrade = "";
     if (numGrade >= 90) letterGrade = "A";
@@ -93,14 +85,14 @@ class Grades extends Component {
 
   render() {
     const loggedIn = this.props.loggedIn;
-
     return (
       <div>
         {loggedIn ? (
           <div className="grades-page-holder">
             <GradesTopInfo
-              totalScore={this.state.avg.reduce((a,b)=>(a+b),0)}
-              numClass={this.state.avg.length} />
+              totalScore={this.state.avg.reduce((a, b) => (a + b), 0)}
+              numClass={this.state.avg.length}
+            />
             <div className="card grades-cards" id="grades-title-card">
               <div className="card-content" id="grades-title-card-content">
                 <div className="columns">
@@ -133,8 +125,6 @@ class Grades extends Component {
                       <div className="columns">
                         <div className="column is-4">
                           <p className="class-title">
-                            {/* get the subject name */}
-                            {/* I put [0] as average grade */}
                             {subject[1].courseName}
                           </p>
                         </div>

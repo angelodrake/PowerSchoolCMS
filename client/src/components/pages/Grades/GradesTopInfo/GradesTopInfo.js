@@ -7,7 +7,7 @@ const GradesTopInfo = props => {
 console.log(props.numClass)
 
 
-let avg = props.totalScore/props.numClass/25
+let avg = Math.round(props.totalScore/props.numClass/2.5)/10
 console.log(avg)
   return (
     <div className="level">
