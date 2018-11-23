@@ -3,6 +3,8 @@ import "./Grades.css";
 import { Redirect } from "react-router-dom";
 import grade from "./grade.json";
 import GradesTopInfo from "./GradesTopInfo/GradesTopInfo";
+import Collapse from "./Collapse";
+
 
 class Grades extends Component {
   state = {
@@ -16,7 +18,6 @@ class Grades extends Component {
   };
 
   componentDidMount() {
-    this.gradeFilter();
     this.initializeGradebook()
   }
 
@@ -25,6 +26,7 @@ class Grades extends Component {
   }
 
   groupCoursebook = (GradeFromJson, groupProperty) => {
+
     GradeFromJson.reduce((reconstructedGradebook, assignment) => {
       let key = assignment[groupProperty];
       if (!reconstructedGradebook[key]) {
@@ -33,8 +35,7 @@ class Grades extends Component {
       reconstructedGradebook[key].push(assignment);
       return reconstructedGradebook;
     })
-    // if anyone think of a better way to reduce the grade array
-    // feel free to make change
+
     delete GradeFromJson[0].id;
     delete GradeFromJson[0].courseName;
     delete GradeFromJson[0].assignmentName;
@@ -43,11 +44,10 @@ class Grades extends Component {
     delete GradeFromJson[0].score;
     delete GradeFromJson[0].category;
 
-    // this.setState({ newGradebook: GradeFromJson[0] })
-
     let allHomework = Object.values(GradeFromJson[0])
 
     let avgScoreArray = [];
+
     for (var i = 0; i < allHomework.length; i++) {
       let sum = allHomework[i].reduce(function (sum, assignment) {
         return sum + assignment.score;
@@ -58,35 +58,19 @@ class Grades extends Component {
       this.setState({ avg: avgScoreArray })
     }
 
-    console.log('this is :' + JSON.stringify(allHomework))
     console.log(avgScoreArray)
 
     let refinedGrade = allHomework.slice()
 
-    for (var i = 0; i<refinedGrade.length;i++){
-      refinedGrade[i].unshift({average:avgScoreArray[i]})
+    for (var i = 0; i < refinedGrade.length; i++) {
+      if (!isNaN(avgScoreArray[0])) {
+        refinedGrade[i].unshift({ average: avgScoreArray[i] })
+      }
+
+
     }
-
-
-    console.log('this is the last:' + JSON.stringify(refinedGrade))
-    this.setState({ newGradebook: refinedGrade })
+    this.setState({ newGradebook: refinedGrade }, () => (console.log(JSON.stringify(this.state.newGradebook))))
   }
-
-  gradeFilter = () => {
-    this.setState({
-      english: grade.filter(course => course.courseName === "English 3")
-    }, () => (console.log(JSON.stringify(this.state.newGradebook))));
-    this.setState({
-      math: grade.filter(course => course.courseName === "Math 3")
-    }, () => (console.log('math: ' + this.state.math)));
-
-    this.setState({
-      geography: grade.filter(course => course.courseName === "Geography")
-    }, () => (console.log('geo: ' + this.state.geography)));
-    this.setState({
-      biology: grade.filter(course => course.courseName === "Biology")
-    }, () => (console.log('nbio: ' + this.state.biology)));
-  };
 
   calculateLetterGrade = numGrade => {
     let letterGrade = "";
@@ -97,10 +81,6 @@ class Grades extends Component {
     else if (numGrade < 50) letterGrade = "F";
     return letterGrade;
   };
-
-  handleOnClick = (e) => {
-
-  }
 
   render() {
     const loggedIn = this.props.loggedIn;
@@ -132,40 +112,33 @@ class Grades extends Component {
                 </div>
               </div>
             </div>
+
             {/* grade-card */}
-
             {Object.values(this.state.newGradebook).map(subject => (
-              <div className="card grades-cards">
-                <div className="card-content">
-                  <div className="holder score-holder">
-                    <div className="columns">
-                      <div className="column is-4">
-                        <p className="class-title">
-                          {/* get the subject name */}
-                          {subject[1].courseName}
-
-                        </p>
-                      </div>
-                      <div className="column is-4">
-                        <p className="class-score">
-                          {subject[0].average}{" "}
-                          -{" "}
-                          {this.state.english.length &&
-                            this.calculateLetterGrade(
-                              subject[0].average
-                            )}
-                        </p>
-                      </div>
-                      <div className="column is-4">
-                        <p className="view-assignments">
-                          <span
-                            className="button view-assignments-button"
-                            name={subject[0].courseName}
-                            onClick={this.handleOnClick}
-                          >
-                            View Assignments
-                         </span>
-                        </p>
+              <div>
+                <div className="card grades-cards">
+                  <div className="card-content">
+                    <div className="holder score-holder">
+                      <div className="columns">
+                        <div className="column is-4">
+                          <p className="class-title">
+                            {/* get the subject name */}
+                            {/* I put [0] as average grade */}
+                            {subject[1].courseName}
+                          </p>
+                        </div>
+                        <div className="column is-4">
+                          <p className="class-score">
+                            {subject[0].average}
+                            {" "}-{" "}
+                            {this.calculateLetterGrade(subject[0].average)}
+                          </p>
+                        </div>
+                        <div className="column is-4">
+                          <Collapse
+                            info={{ subject }}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -173,6 +146,7 @@ class Grades extends Component {
               </div>
             ))}
             {/* end of grade card */}
+
           </div>
         ) : (
             <div>
