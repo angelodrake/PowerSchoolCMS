@@ -14,15 +14,15 @@ import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import Chat from "./components/Chat/chat";
 import Calendar from "./components/pages/Calendar";
-import Attendance from "./components/pages/Attendance/Attendance";
 import FormalDetails from "./components/pages/FormalDetails/FormalDetails";
 import Alerts from "./components/Alerts/Alerts";
 import Grades from "./components/pages/Grades";
+import Attendance from "./components/pages/Attendance/Attendance";
 import "./App.css";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       loggedIn: false,
       username: null,
@@ -191,7 +191,7 @@ class App extends Component {
             <Route exact path="/grades" render={() => <Grades loggedIn={this.state.loggedIn} />} />
           </div>
           <div className="sidebar">
-            <SideBar loggedIn={this.state.loggedIn} />
+            <SideBar loggedIn={this.state.loggedIn} currentUser={this.state.username} />
           </div>
           <Footer loggedIn={this.state.loggedIn} />
         </div>

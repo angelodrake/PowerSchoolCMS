@@ -69,7 +69,7 @@ class Calendar extends Component {
         {loggedIn ? (
           <div className="calendar-page-holder">
             <div className="title-holder has-text-centered">
-              <h1 className="event-title has-text-white">Events Calendar Fall 2018</h1>
+              <h1 className="event-title ">Events Calendar Fall 2018</h1>
             </div>
             <div className="columns calendar-columns">
               <div className="column is-8">
