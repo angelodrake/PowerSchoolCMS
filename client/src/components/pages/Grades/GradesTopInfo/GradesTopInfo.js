@@ -17,8 +17,8 @@ const GradesTopInfo = props => {
             <p className="title is-1 has-text-centered grades-top-info-title">
               {avg}
             </p>
-
           </div>
+        </div>
         </div>
         <div className="level-item">
           <div className="card barChart-card">
@@ -29,7 +29,7 @@ const GradesTopInfo = props => {
           </div>
         </div>
       </div>
-    </div>
+  
   );
 }
 

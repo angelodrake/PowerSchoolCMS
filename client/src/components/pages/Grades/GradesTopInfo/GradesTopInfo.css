@@ -1,4 +1,4 @@
- .gpa-card {
+ .grades-top-info-card{
   height: 200px;
   width: 275px;
 }
@@ -20,4 +20,8 @@
   .grades-top-info-card {
     width: 200px;
   }
+}
+
+.is-mobile{
+  margin:auto;
 }

@@ -73,9 +73,9 @@ export default class Forms extends React.Component {
                           Date: {moment(forms.date).format("YYYY-MM-DD")}
                         </span>
                       </div>
-                      <div className="break" />
-                      <div className="field is-grouped is-grouped-centered formButtons columns">
-                        <div className="control column has-text-centered view-form-button-holder">
+                      <hr />
+                      <div className="row">
+                        <div className="col col-lg-6">
                           <button
                             className="button is-link"
                             value={forms.imgUrl}
@@ -85,9 +85,11 @@ export default class Forms extends React.Component {
                             View Form
                           </button>
                         </div>
-                        <div className="separator" />
-                        {!forms.isRead ? (
-                          <div className="control column has-text-centered">
+                        
+                          <div className="separator" />
+                        
+                        <div className="col col-lg-5">
+                          {!forms.isRead ? (
                             <span
                               className="button danger"
                               name={forms.name}
@@ -95,28 +97,29 @@ export default class Forms extends React.Component {
                             >
                               Mark as Read
                             </span>
-                          </div>
-                        ) : (
-                          <span className="boldSpan" style={{ color: "green" }}>
-                            <i
-                              className="fa fa-check-square"
-                              aria-hidden="true"
-                              style={{ marginRight: 1 + "em" }}
-                            />
-                            Marked As Read
+                          ) : (
+                              <span className="greenboldSpan" style={{ color: "green" }}>
+                                <i
+                                  className="fa fa-check-square"
+                                  aria-hidden="true"
+                                  style={{ marginRight: 1 + "em" }}
+                                />
+                                Marked as Read
                           </span>
-                        )}
+                            )}
+                        </div>
                       </div>
                     </div>
                   </div>
-                  
-              ))}
+
+                ))}
 
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                   <ModalHeader toggle={this.toggle}>
-                    {this.state.imgName}
+                    <h3>{this.state.imgName}</h3>
                   </ModalHeader>
                   <ModalBody>
+                    <h5>Click to enlarge</h5>
                     <a href={this.state.imgUrl} target="_blank">
                       <img src={this.state.imgUrl} alt={this.state.imgName} />
                     </a>
@@ -127,11 +130,11 @@ export default class Forms extends React.Component {
             </Columns>
           </div>
         ) : (
-          <div>
-            {console.log(loggedIn)}
-            <Redirect to={{ pathname: this.state.redirectTo }} />
-          </div>
-        )}
+            <div>
+              {console.log(loggedIn)}
+              <Redirect to={{ pathname: this.state.redirectTo }} />
+            </div>
+          )}
       </div>
     );
   }
