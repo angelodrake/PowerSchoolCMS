@@ -1,16 +1,14 @@
 import React from "react";
 import "./GradesTopInfo.css";
 
-
 const GradesTopInfo = props => {
-  console.log(props.totalScore)
-console.log(props.numClass)
+  console.log(props.totalScore);
+  console.log(props.numClass);
 
-
-let avg = Math.round(props.totalScore/props.numClass/2.5)/10
-console.log(avg)
+  let avg = Math.round(props.totalScore / props.numClass / 2.5) / 10;
+  console.log(avg);
   return (
-    <div className="level">
+    <div className="level is-mobile">
       <div className="level-item">
         <div className="card grades-top-info-card">
           <div className="grades-top-info-card-content card-content">
