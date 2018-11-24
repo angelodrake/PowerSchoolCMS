@@ -31,6 +31,7 @@ class barChart extends React.Component {
           height={50}
           
           options={{
+           
             legend: {
               display: false
             },

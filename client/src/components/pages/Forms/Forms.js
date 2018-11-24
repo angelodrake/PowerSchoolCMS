@@ -10,6 +10,7 @@ import {
 } from 'reactstrap';
 import API from '../../../utils/API'
 import moment from 'moment'
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
 
@@ -67,6 +68,7 @@ export default class Forms extends React.Component {
           <div>
             <Columns>
               <Column size="is-three-fifths formsBuffer">
+
                 {this.state.forms.map(forms => (
                   <div className="formsContainer">
                     <div className="innerContainer">
@@ -92,41 +94,42 @@ export default class Forms extends React.Component {
                             >Click to mark as Read</span>
                           </div>
                         ) : (
-                            <span className="boldSpan" style={{color:'green'}}>
+                            <span className="boldSpan" style={{ color: 'green' }}>
                               <i
                                 className="fa fa-check-square"
                                 aria-hidden="true"
-                                style={{marginRight: 1 + 'em'}}
+                                style={{ marginRight: 1 + 'em' }}
                               />Marked As Read
-                              
+
                               </span>
                           )}
 
                       </div>
                     </div>
                   </div>
-                ))}
+                  
+              ))}
 
-                <Modal isOpen={this.state.modal}
-                  toggle={this.toggle}
-                >
-                  <ModalHeader toggle={this.toggle}
-                  >{this.state.imgName}
-                  </ModalHeader>
-                  <ModalBody>
-                    <a href={this.state.imgUrl} target='_blank'>
-                      <img src={this.state.imgUrl} alt={this.state.imgName} /></a>
-                  </ModalBody>
-                </Modal>
+              <Modal isOpen={this.state.modal}
+                toggle={this.toggle}
+              >
+                <ModalHeader toggle={this.toggle}
+                >{this.state.imgName}
+                </ModalHeader>
+                <ModalBody>
+                  <a href={this.state.imgUrl} target='_blank'>
+                    <img src={this.state.imgUrl} alt={this.state.imgName} /></a>
+                </ModalBody>
+              </Modal>
               </Column>
             </Columns>
           </div>
-        ) : (
+      ) : (
             <div>
-              {console.log(loggedIn)}
-              <Redirect to={{ pathname: this.state.redirectTo }} />
-            </div>
-          )}
+          {console.log(loggedIn)}
+          <Redirect to={{ pathname: this.state.redirectTo }} />
+        </div>
+        )}
       </div>
     )
   }

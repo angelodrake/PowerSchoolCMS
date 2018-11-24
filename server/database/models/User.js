@@ -27,6 +27,14 @@ const userSchema = new Schema({
       // The ObjectIds will refer to the ids in the Form model
       ref: "Form"
     }
+  ],
+  supportTicket:[
+    {
+      // Store ObjectIds in the array
+      type: Schema.Types.ObjectId,
+      // The ObjectIds will refer to the ids in the Form model
+      ref: "Support"
+    }
   ]
 });
 
