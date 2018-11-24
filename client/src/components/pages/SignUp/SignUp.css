@@ -17,3 +17,9 @@
 .innerLogin {
   margin: 2rem;
 }
+
+@media (min-width: 769px) {
+  .signUpFormBuffer {
+    min-width: 400px;
+  }
+}

@@ -23,3 +23,11 @@
     width: 100vw;
   }
 }
+
+a {
+  color: rgb(3, 33, 91);
+}
+a:hover {
+  color: rgb(150, 192, 232);
+  text-decoration: none;
+}

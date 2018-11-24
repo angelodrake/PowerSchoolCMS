@@ -1,11 +1,10 @@
 .separator {
   border-right: solid 1px #ccc;
-  margin-left: 4rem;
-  margin-right: 3rem;
+  margin: 0px;
 }
 
 .formsBuffer {
-  margin: 3rem 5rem 3rem 15rem;
+  margin: 0px;
 }
 
 .subtext {
@@ -16,7 +15,8 @@
   border: solid 1px #ccc;
   box-shadow: 1px 1px 4px #ccc;
   border-radius: 6px;
-  margin: 4rem 4rem 4rem 4rem;
+  margin: 4rem;
+  min-width: 300px;
 }
 
 .innerContainer {
@@ -38,6 +38,16 @@
   margin-top: 3rem;
 }
 
-img{
-max-height:60vh  
+img {
+  max-height: 60vh;
+}
+
+.view-form-button-holder {
+  margin-right: 0px !important;
+}
+
+@media (max-width: 600px) {
+  .formsContainer {
+    margin: 4rem 1rem 4rem 1rem;
+  }
 }

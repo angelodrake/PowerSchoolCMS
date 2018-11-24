@@ -4,16 +4,6 @@
   min-height: 100vh;
 }
 
-.separator {
-  border-right: solid 1px #ccc;
-  margin-left: 4rem;
-  margin-right: 3rem;
-}
-
-.formsBuffer {
-  margin: 3rem 5rem 3rem 15rem;
-}
-
 .subtext {
   font-size: 10px;
 }
@@ -54,7 +44,8 @@
 }
 
 .class-title,
-.class-score {
+.class-score,
+.class-overdue {
   font-size: 26px;
 }
 
@@ -71,10 +62,16 @@
   padding-bottom: 0px;
 }
 
-hr{
-  margin-top:0;
+hr {
+  margin-top: 0;
 }
 
-.is-4{
-  text-align: center;
+.class-overdue {
+  margin-left: 3rem;
+}
+
+@media (max-width: 540.9px) {
+  .class-overdue {
+    margin-left: 1.5rem;
+  }
 }

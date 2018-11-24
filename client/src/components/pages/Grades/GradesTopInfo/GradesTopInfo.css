@@ -15,3 +15,9 @@
 .grades-top-info-card-content {
   padding-top: 0px;
 }
+
+@media (max-width: 768.9px) {
+  .grades-top-info-card {
+    width: 200px;
+  }
+}
