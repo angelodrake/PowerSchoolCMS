@@ -5,11 +5,12 @@
   margin-left: 3rem;
   border: solid 1px #ccc;
   border-radius: 6px;
-  background: rgba(245, 245, 245, 0.6);
+  background: rgba(16, 116, 211, 0.6);
 }
 
 .backdrop {
-  background: url("http://www.sheridan.k12.wy.us/themes/Windsor/sysimages/custom/Background.png") no-repeat center center fixed;
+  /* background: url("http://www.sheridan.k12.wy.us/themes/Windsor/sysimages/custom/Background.png") no-repeat center center fixed; */
+  background: rgb(13, 51, 87);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
