@@ -12,7 +12,8 @@ class Grades extends Component {
     grade,
     newGradebook: [],
     avg: [],
-    overdue:[]
+    overdue:[],
+    classes:[]
   };
 
   componentDidMount() {
@@ -42,6 +43,8 @@ class Grades extends Component {
     delete GradeFromJson[0].category;
     //duplicate the target key:value to an array for later operation
     let allHomework = Object.values(GradeFromJson[0])
+    this.setState({classes:Object.keys(GradeFromJson[0])}
+    ,()=>console.log(this.state.classes))
 
     // average calculation
     let avgScoreArray = [];
@@ -114,6 +117,8 @@ class Grades extends Component {
         {loggedIn ? (
           <div className="grades-page-holder">
             <GradesTopInfo
+              average={this.state.avg}
+              course={this.state.classes}
               totalScore={this.state.avg.reduce((a, b) => (a + b), 0)}
               numClass={this.state.avg.length}
             />

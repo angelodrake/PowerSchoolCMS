@@ -1,7 +1,12 @@
-.grades-top-info-card {
+ .gpa-card {
   height: 200px;
   width: 275px;
 }
+
+.barChart-card {
+  height: 200px;
+  min-width: 600px;
+} 
 
 .grades-top-info-title {
   padding-top: 50px;
