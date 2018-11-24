@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
 import axios from "axios";
-import Column from '../../Grid/Column';
-import Columns from '../../Grid/Columns';
-import './LoginForm.css'
+import Column from "../../Grid/Column";
+import Columns from "../../Grid/Columns";
+import "./LoginForm.css";
 
 class LoginForm extends Component {
   constructor(props) {
@@ -60,45 +60,58 @@ class LoginForm extends Component {
       return <Redirect to={{ pathname: this.state.redirectTo }} />;
     } else {
       return (
-        <Columns extras="is-centered backdrop">
+        <Columns extras="is-centered background">
           <Column size="is-one-third loginFormBuffer">
-          <div className="innerLogin">
-            <div className="has-text-centered loginTitle">
-              Login to PowerSchool
-            </div>
+            <div className="innerLogin">
+              <div className="has-text-centered loginTitle">
+                Login to PowerSchool
+              </div>
               <div>
                 <div className="field">
                   <p className="control">
                     <label>Username:</label>
-                    <input className="input inputMargins" type="text" id="username" name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange} />
+                    <input
+                      className="input inputMargins"
+                      type="text"
+                      id="username"
+                      name="username"
+                      placeholder="Username"
+                      value={this.state.username}
+                      onChange={this.handleChange}
+                    />
                   </p>
                 </div>
                 <div className="field">
                   <p className="control">
                     <label>Password:</label>
-                    <input className="input" placeholder="password" type="password" name="password" value={this.state.password} onChange={this.handleChange} />
+                    <input
+                      className="input"
+                      placeholder="password"
+                      type="password"
+                      name="password"
+                      value={this.state.password}
+                      onChange={this.handleChange}
+                    />
                   </p>
                 </div>
                 <div className="field">
                   <p className="control">
-                  <div className="field is-grouped">
-                    <p className="control">
-                    <button onClick={this.handleSubmit} className="button">
-                      Login
-                    </button>
-                    </p>
-                    <p className="control">
-                      <Link to="/signup" className="button is-light">
-                        Sign-up
-                      </Link>
-                    </p>
-                  </div>
+                    <div className="field is-grouped">
+                      <p className="control">
+                        <button onClick={this.handleSubmit} className="button">
+                          Login
+                        </button>
+                      </p>
+                      <p className="control">
+                        <Link to="/signup" className="button is-light">
+                          Sign-up
+                        </Link>
+                      </p>
+                    </div>
                   </p>
                 </div>
                 <div className="has-text-centered forgot">
-                  <p>
-                    Forgot your password? Talk to your network admin ASAP.
-                  </p>
+                  <p>Forgot your password? Talk to your network admin ASAP.</p>
                 </div>
               </div>
             </div>

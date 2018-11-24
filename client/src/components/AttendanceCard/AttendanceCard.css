@@ -9,10 +9,11 @@
 }
 
 .attendanceCardBuffer {
-  margin: 2rem 10rem 0rem 0rem;
+  margin: 2rem;
   border: solid 1px #ccc;
   border-radius: 6px;
   box-shadow: 1px 1px 4px #ccc;
+  min-width: 250px;
 }
 
 .attendanceClassTitle {
@@ -20,8 +21,7 @@
 }
 
 .attendanceSeparator {
-  margin-left: 8rem;
-  margin-right: 9rem;
+  margin: 0px;
   border-right: solid 1px #ccc;
 }
 
