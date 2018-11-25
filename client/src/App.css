@@ -31,3 +31,7 @@ a:hover {
   color: rgb(150, 192, 232);
   text-decoration: none;
 }
+
+body {
+  background-color: rgb(252, 253, 255);
+}

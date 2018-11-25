@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { Route, Link } from "react-router-dom";
-import Column from "../Grid/Column";
-import Columns from "../Grid/Columns";
 import "./Navbar.css";
 import axios from "axios";
 
@@ -51,21 +49,9 @@ class Navbar extends Component {
             aria-label="main navigation"
           >
             <div className="navbar-brand leftBuffer">
-              <Link to="/" className="navbar-item navTextFormat">
+              <Link to="/" className="navbar-item navTextFormat" id="app-title">
                 PowerSchoolCMS
               </Link>
-              {/* <a
-                role="button"
-                className="navbar-burger burger"
-                aria-label="menu"
-                aria-expanded="false"
-                data-target="navbarBasicExample"
-                id="navbar-burger"
-              >
-                <span aria-hidden="true" />
-                <span aria-hidden="true" />
-                <span aria-hidden="true" />
-              </a> */}
             </div>
             <div id="navbarBasicExample" className="navbar-menu">
               <div className="navbar-end">

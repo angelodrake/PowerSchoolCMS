@@ -17,8 +17,9 @@ class SideBar extends Component {
   }
 
   toggleIsDisplayNone() {
-    document.getElementById("sidebar").classList.toggle("is-display-none");
-    console.log("hey hey hey");
+    var sideBar = document.getElementById("sidebar");
+    sideBar.classList.toggle("is-display-none");
+    sideBar.classList.toggle("margin-for-sidebar");
   }
 
   render() {
@@ -27,8 +28,8 @@ class SideBar extends Component {
       <div>
         {loggedIn ? (
           <div>
-            <a id="navbar-burger2" onClick={this.toggleIsDisplayNone}>
-              <i class="fas fa-bars" />
+            <a id="navbar-burger-link" onClick={this.toggleIsDisplayNone}>
+              <i class="fas fa-bars fa-2x sidebar-burger" />
             </a>
             <aside className="menu is-display-none" id="sidebar">
               <img
@@ -146,6 +147,32 @@ class SideBar extends Component {
                   </Link>
                 </li>
               </ul>
+              <div id="navbar-sidebar-holder">
+                <hr className="nav-bars-separator" />
+                <div className="navbar-sidebar-divs">
+                  <button className="button ">
+                    <i
+                      className=" fa fa-bell nav-bar-side-bar-icon"
+                      aria-hidden="true"
+                    />
+                  </button>
+                </div>
+                <div className="navbar-sidebar-divs">
+                  <Link to="/support" className="">
+                    Support
+                  </Link>
+                </div>
+                <div className="navbar-sidebar-divs">
+                  <Link to="/logout" onClick={this.logout} className="">
+                    Logout
+                  </Link>
+                </div>
+                <div className="navbar-sidebar-divs">
+                  <button className="button ">
+                    <i className="fas fa-user-alt nav-bar-side-bar-icon" />
+                  </button>
+                </div>
+              </div>
             </aside>
           </div>
         ) : (

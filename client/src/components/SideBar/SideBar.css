@@ -33,8 +33,9 @@ aside {
   position: absolute;
 }
 
+/* the page you currently are on */
 .is-current {
-  background-color: rgb(150, 192, 232);
+  background-color: rgb(150, 192, 232) !important;
   transition: all 0.3s ease;
 }
 
@@ -46,23 +47,54 @@ aside {
   color: rgb(3, 33, 83);
 }
 
+/* sidebar goes away if screen isn't very wide */
+
+#navbar-sidebar-holder {
+  margin-left: 20px;
+  display: none;
+}
+
+.nav-bars-separator {
+  margin-right: 20px;
+}
+
+.navbar-sidebar-divs {
+  margin: 10px;
+  font-size: 20px;
+}
+
+/* button to bring up sidebar on smaller screens */
+#navbar-burger-link {
+  color: rgb(150, 192, 232);
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 31;
+  display: none;
+}
+
+#navbar-burger-link:hover {
+  color: #ddd;
+}
+
 @media (max-width: 1087.5px) {
   .is-display-none {
     display: none;
   }
-}
-
-#navbar-burger2 {
-  color: rgb(150, 192, 232);
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  z-index: 30;
-  display: none;
-}
-
-@media (max-width: 1087.5px) {
-  #navbar-burger2 {
+  #navbar-burger-link {
     display: block;
+  }
+
+  .margin-for-sidebar {
+    position: absolute;
+    z-index: 30;
+    height: 100%;
+  }
+
+  #navbar-sidebar-holder {
+    display: block;
+  }
+  aside {
+    overflow: auto;
   }
 }

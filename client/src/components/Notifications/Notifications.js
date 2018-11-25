@@ -34,8 +34,8 @@ const Notifications = props => {
               <Column size="colBorder">
                 <div className="has-text-centered atnText">
                   <span className="boldSpan">Attention:</span> You've used 4 of
-                  your 5 absences in English III, one more and you'll have to report to
-                  administration for recovery.
+                  your 5 absences in English III, one more and you'll have to
+                  report to administration for recovery.
                 </div>
                 <div className="break" />
                 <div className="has-text-centered">
@@ -53,8 +53,8 @@ const Notifications = props => {
               <Column size="colBorder">
                 <div className="has-text-centered atnText">
                   <span className="boldSpan">Reminder:</span> You must submit
-                  your release form to student services off before school lets
-                  out on the 7th of December.
+                  your release form to student services before school lets out
+                  on the 7th of December.
                 </div>
                 <div className="break" />
                 <div className="has-text-centered">
@@ -72,7 +72,7 @@ const Notifications = props => {
               <Column size="colBorder">
                 <div className="has-text-centered atnText">
                   <span className="boldSpan">Turned in: Homework #7:</span> We
-                  have successfully received your homework #7, it will be graded
+                  have successfully received your homework #7. It will be graded
                   shortly!
                 </div>
                 <div className="break" />
