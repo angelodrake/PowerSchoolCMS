@@ -79,7 +79,7 @@ class App extends Component {
               <Alerts alertText="Homework #8: Due: Dec 6th at 11:59pm" />
             </Navbar>
             <Route exact path="/" render={() => <Home loggedIn={this.state.loggedIn} />} />
-            <Route exact path="/support" render={() => <Support loggedIn={this.state.loggedIn} />} />
+            <Route exact path="/support" render={() => <Support loggedIn={this.state.loggedIn} username={this.state.username}/>} />
             <Route exact path="/forms" render={() => <Forms loggedIn={this.state.loggedIn} />} />
             <Route exact path="/attendance" render={() => <Attendance loggedIn={this.state.loggedIn} />} />
             <Route exact path="/contacts" render={() => <Contacts loggedIn={this.state.loggedIn} />} />

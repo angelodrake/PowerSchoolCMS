@@ -8,6 +8,7 @@ module.exports = {
         User.findOne({ _id: req.params.id })
             .populate("gradebook")
             .populate("form")
+            .populate("supportTicket")
             .then(function (dbUser) {
                 res.json(dbUser);
             })
@@ -19,6 +20,7 @@ module.exports = {
         User.find(req.query)
             .populate("gradebook")
             .populate("form")
+            .populate("supportTicket")
             .sort({ date: -1 })
             .then(dbForm => res.json(dbForm))
             .catch(err => res.status(422).json(err));
