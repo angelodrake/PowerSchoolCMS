@@ -23,6 +23,7 @@ class SideBar extends Component {
     document
       .getElementById("navbar-burger-link")
       .classList.toggle("move-burger-out");
+    document.getElementById("background-overlay").classList.toggle("unseen");
   }
 
   render() {
@@ -181,6 +182,7 @@ class SideBar extends Component {
                 </div>
               </div>
             </aside>
+            <div className="unseen" id="background-overlay" />
           </div>
         ) : (
           <div>
