@@ -38,9 +38,9 @@
   box-shadow: 1px 1px 6px;
 }
 
-#navbar-burger {
-  color: white;
-  position: absolute;
-  top: 15px;
-  left: 15px;
+@media (max-width: 1087.5px) {
+  #app-title {
+    position: absolute;
+    right: 20px;
+  }
 }
