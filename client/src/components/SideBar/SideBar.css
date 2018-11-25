@@ -65,7 +65,7 @@ aside {
 
 /* button to bring up sidebar on smaller screens */
 #navbar-burger-link {
-  color: rgb(150, 192, 232);
+  color: white;
   position: absolute;
   top: 25px;
   left: 25px;
@@ -74,7 +74,7 @@ aside {
 }
 
 #navbar-burger-link:hover {
-  color: #ddd;
+  color: rgb(150, 192, 232);
 }
 
 @media (max-width: 1087.5px) {
@@ -97,4 +97,8 @@ aside {
   aside {
     overflow: auto;
   }
+}
+
+.move-burger-out {
+  left: 16rem !important;
 }

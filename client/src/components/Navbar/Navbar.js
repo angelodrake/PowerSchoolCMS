@@ -56,11 +56,11 @@ class Navbar extends Component {
             <div id="navbarBasicExample" className="navbar-menu">
               <div className="navbar-end">
                 <div className="rightBuffer navbar-item">
-                  <div class="navbar-item has-dropdown is-hoverable">
+                  <div className="navbar-item has-dropdown is-hoverable">
                     <button className="navbar-item button iconFormat navItemSpacing">
                       <i className="fas fa-bell" />
                     </button>
-                    <div class="navbar-dropdown alertsStyles">
+                    <div className="navbar-dropdown alertsStyles">
                       {this.props.children}
                     </div>
                   </div>
