@@ -35,9 +35,7 @@ class Navbar extends Component {
       });
   }
 
-  alertPopout() {
-
-  }
+  alertPopout() {}
 
   render() {
     const loggedIn = this.props.loggedIn;
@@ -56,7 +54,7 @@ class Navbar extends Component {
               <Link to="/" className="navbar-item navTextFormat">
                 PowerSchoolCMS
               </Link>
-              <a
+              {/* <a
                 role="button"
                 className="navbar-burger burger"
                 aria-label="menu"
@@ -67,19 +65,19 @@ class Navbar extends Component {
                 <span aria-hidden="true" />
                 <span aria-hidden="true" />
                 <span aria-hidden="true" />
-              </a>
+              </a> */}
             </div>
             <div id="navbarBasicExample" className="navbar-menu">
               <div className="navbar-end">
                 <div className="rightBuffer navbar-item">
-                <div class="navbar-item has-dropdown is-hoverable">
-                  <button className="navbar-item button iconFormat navItemSpacing">
-                    <i className="fas fa-bell" />
-                  </button>
-                  <div class="navbar-dropdown alertsStyles">
-                    {this.props.children}
+                  <div class="navbar-item has-dropdown is-hoverable">
+                    <button className="navbar-item button iconFormat navItemSpacing">
+                      <i className="fas fa-bell" />
+                    </button>
+                    <div class="navbar-dropdown alertsStyles">
+                      {this.props.children}
+                    </div>
                   </div>
-                </div>
                   <div className="navbar-brand">
                     <Link
                       to="/support"
