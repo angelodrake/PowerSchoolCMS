@@ -1,5 +1,6 @@
 import React from "react";
 import "./GradesTopInfo.css";
+import GradeTopbar from './GradeTopBar'
 
 const GradesTopInfo = props => {
   console.log(props.totalScore);
@@ -18,19 +19,19 @@ const GradesTopInfo = props => {
             </p>
           </div>
         </div>
-      </div>
-      <div className="level-item">
-        <div className="card grades-top-info-card ">
-          <div className="grades-top-info-card-content card-content">
-            <p className="subtitle has-text-centered">Missing Assignments</p>
-            <p className="title is-1 has-text-centered grades-top-info-title">
-              0
-            </p>
+        </div>
+        <div className="level-item">
+          <div className="card barChart-card">
+            <GradeTopbar
+              average={Object.values(props.average)}
+              classes={Object.values(props.course)}
+            />
           </div>
         </div>
       </div>
-    </div>
+  
   );
-};
+}
+
 
 export default GradesTopInfo;

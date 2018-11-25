@@ -39,7 +39,7 @@
 }
 
 img {
-  max-height: 60vh;
+  max-height: 80vh;
 }
 
 .view-form-button-holder {
@@ -50,4 +50,12 @@ img {
   .formsContainer {
     margin: 4rem 1rem 4rem 1rem;
   }
+}
+
+.col{
+  text-align: center
+}
+
+.greenboldSpan{
+  font-size: 18px;
 }

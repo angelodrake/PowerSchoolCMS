@@ -15,7 +15,9 @@ class example extends Component {
         let assignmentArray = this.props.info.subject.filter(item => Object.keys(item).includes('score'))
         this.setState({
             assignment: assignmentArray
-        },()=>(console.log(this.state.assignment)))
+        }
+        // ,()=>(console.log(this.state.assignment))
+        )
     }
 
     render() {
