@@ -102,3 +102,16 @@ aside {
 .move-burger-out {
   left: 16rem !important;
 }
+
+#background-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+.unseen {
+  display: none;
+}

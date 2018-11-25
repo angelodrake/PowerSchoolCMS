@@ -1,7 +1,5 @@
 .upcomingBuffer {
-  margin-top: 11rem;
-  margin-left: 6rem;
-  margin-right: 14rem;
+  margin: 2rem;
 }
 
 .upcomingHeader {
@@ -41,25 +39,25 @@
 .testName {
   font-size: 24px;
   font-weight: 550;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .details {
   font-size: 20px;
   font-weight: 550;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .absence {
   font-size: 20px;
   font-weight: 550;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .checkin {
   font-size: 20px;
   font-weight: 550;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .innerBuffer {
