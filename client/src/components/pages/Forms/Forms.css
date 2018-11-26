@@ -39,7 +39,7 @@
 }
 
 img {
-  max-height: 80vh;
+  max-height: 60vh;
 }
 
 .view-form-button-holder {
@@ -58,4 +58,8 @@ img {
 
 .greenboldSpan{
   font-size: 18px;
+}
+
+.modal-body{
+  text-align: center;
 }
