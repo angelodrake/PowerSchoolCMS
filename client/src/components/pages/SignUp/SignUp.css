@@ -23,3 +23,8 @@
     min-width: 400px;
   }
 }
+
+.backdrop {
+  background-image: url("./backgroundsu.jpg");
+  background-size: cover;
+ }
