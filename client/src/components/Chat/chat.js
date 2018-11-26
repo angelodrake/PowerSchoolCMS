@@ -5,7 +5,13 @@ import { USER_CONNECTED, LOGOUT } from "./Events";
 import ChatLogin from "./ChatLogin";
 import ChatContainer from "./chats/ChatContainer";
 
-const socketUrl = "http://localhost:3001";
+let socketUrl = ""
+
+if (process.env.NODE_ENV === "production") {
+  socketUrl = window.location.hostname;
+} else {
+  socketUrl = "http://localhost:3001"
+}
 
 class Chat extends Component {
   constructor(props) {
