@@ -19,3 +19,7 @@ footer {
     width: 100vw;
   }
 }
+
+.bottom-logo{
+  border-radius: 50%;
+}
