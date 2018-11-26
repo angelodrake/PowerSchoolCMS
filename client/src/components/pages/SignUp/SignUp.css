@@ -13,6 +13,10 @@
   border-radius: 6px;
   background: rgba(245, 245, 245, 0.6);
 }
+.backdrop {
+  background-image: url("./backgroundSU.jpg");
+  background-size: cover;
+}
 
 .innerLogin {
   margin: 2rem;
