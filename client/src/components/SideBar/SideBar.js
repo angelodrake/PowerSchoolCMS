@@ -158,19 +158,20 @@ class SideBar extends Component {
                     <Link
                       to="/chat"
                       className={
-                        window.location.pathname === "/chat" ? " is-current" : ""
+                        window.location.pathname === "/chat"
+                          ? " is-current"
+                          : ""
                       }
                     >
                       <div className="has-text-left">
                         <i
-                          className="sidebar-icons fa fa-link"
+                          className="sidebar-icons fas fa-comments"
                           aria-hidden="true"
                         />
                         <div className="side-link-text"> Chat</div>
                       </div>
                     </Link>
                   </li>
-
                 </ul>
                 <div id="navbar-sidebar-holder">
                   <hr className="nav-bars-separator" />
@@ -207,11 +208,11 @@ class SideBar extends Component {
             />
           </div>
         ) : (
-            <div>
-              {console.log(loggedIn)}
-              <Redirect to={{ pathname: this.state.redirectTo }} />
-            </div>
-          )}
+          <div>
+            {console.log(loggedIn)}
+            <Redirect to={{ pathname: this.state.redirectTo }} />
+          </div>
+        )}
       </div>
     );
   }
