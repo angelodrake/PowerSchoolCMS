@@ -28,14 +28,17 @@
   color: rgb(150, 192, 232);
 }
 
-/* .chat-logout-button {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-} */
-
 .chat-login-holder {
   height: 70vh;
   clear: both;
   overflow: auto;
+}
+
+#btn-chat-logout {
+  background-color: red;
+  color: white;
+}
+
+#btn-chat-logout:hover {
+  color: #ccc;
 }

@@ -73,11 +73,12 @@ class App extends Component {
     ) : (
       <div>
         <div className="App">
+          <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn}>
+            <Alerts alertText="Graded: Homework #7 has been graded!" />
+            <Alerts alertText="Homework #8: Due: Dec 6th at 11:59pm" />
+          </Navbar>
+
           <div className="mainContent">
-            <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn}>
-              <Alerts alertText="Graded: Homework #7 has been graded!" />
-              <Alerts alertText="Homework #8: Due: Dec 6th at 11:59pm" />
-            </Navbar>
             <Route
               exact
               path="/"

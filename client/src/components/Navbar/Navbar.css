@@ -29,15 +29,26 @@
 }
 
 .navItemSpacing {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-
 .navStyles {
   background: rgb(3, 33, 91);
   box-shadow: 1px 1px 6px;
 }
-
+@media (min-width: 1087.5px) {
+  .navStyles {
+    background: rgb(3, 33, 91);
+    box-shadow: 1px 1px 6px;
+    margin-left: 14rem;
+  }
+}
+@media (max-width: 1087px) {
+  .navStyles {
+    background: rgb(3, 33, 91);
+    box-shadow: 1px 1px 6px;
+  }
+}
 @media (max-width: 1087.5px) {
   #app-title {
     position: absolute;

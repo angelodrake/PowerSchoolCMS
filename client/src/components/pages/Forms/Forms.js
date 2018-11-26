@@ -94,20 +94,22 @@ export default class Forms extends React.Component {
                               name={forms.name}
                               onClick={() => this.handleAsRead(forms._id)}
                             >
-                              Mark as Read
+                              Mark as Signed
                             </span>
                           ) : (
-                            <span
-                              className="greenboldSpan"
-                              style={{ color: "green" }}
-                            >
-                              <i
-                                className="fa fa-check-square"
-                                aria-hidden="true"
-                                style={{ marginRight: 1 + "em" }}
-                              />
-                              Read
-                            </span>
+                            <div className="signed-holder">
+                              <span
+                                className="greenboldSpan"
+                                style={{ color: "green" }}
+                              >
+                                <i
+                                  className="fa fa-check-square"
+                                  aria-hidden="true"
+                                  style={{ marginRight: 1 + "em" }}
+                                />
+                                Signed
+                              </span>
+                            </div>
                           )}
                         </div>
                       </div>
