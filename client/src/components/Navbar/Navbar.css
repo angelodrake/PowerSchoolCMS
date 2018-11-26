@@ -44,3 +44,8 @@
     right: 20px;
   }
 }
+
+#support-navbar-link:hover,
+#logout-navbar-link:hover {
+  color: rgb(150, 192, 232);
+}

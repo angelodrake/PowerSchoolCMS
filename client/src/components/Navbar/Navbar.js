@@ -68,6 +68,7 @@ class Navbar extends Component {
                     <Link
                       to="/support"
                       className="navbar-item navTextFormat navItemSpacing"
+                      id="support-navbar-link"
                     >
                       Support
                     </Link>
@@ -77,6 +78,7 @@ class Navbar extends Component {
                       to="/logout"
                       onClick={this.logout}
                       className="navbar-item navTextFormat navItemSpacing"
+                      id="logout-navbar-link"
                     >
                       Logout
                     </Link>

@@ -53,7 +53,9 @@ class Chat extends Component {
 
     return (
       <div>
-        <h1 className="h1Styles has-text-centered">{title} with Support</h1>
+        <h1 className="h1Styles has-text-centered">
+          <i class="fas fa-comments" /> {title} with Support
+        </h1>
         {!user ? (
           <ChatLogin socket={socket} setUser={this.setUser} />
         ) : (
