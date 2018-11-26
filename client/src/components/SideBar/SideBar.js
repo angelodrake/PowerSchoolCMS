@@ -200,7 +200,11 @@ class SideBar extends Component {
                 </div>
               </div>
             </aside>
-            <div className="unseen" id="background-overlay" />
+            <div
+              className="unseen"
+              id="background-overlay"
+              onClick={this.toggleIsDisplayNone}
+            />
           </div>
         ) : (
             <div>

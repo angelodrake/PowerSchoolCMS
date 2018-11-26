@@ -9,7 +9,7 @@ footer {
   color: white;
   margin-left: 14rem;
   margin-top: 4rem;
-  width: 85vw;
+  width: calc(100%-14rem);
   height: 50px;
 }
 

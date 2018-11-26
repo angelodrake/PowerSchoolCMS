@@ -42,26 +42,33 @@ class ChatLogin extends Component {
   render() {
     const { nickname, error } = this.state;
     return (
-      <div className="h1Styles">
-        <form className="chatlogin">
-          <label htmlFor="nickname">
-            <h2>Enter your name</h2>
-          </label>
-          <input
-            ref={input => {
-              this.textInput = input;
-            }}
-            type="text"
-            id="nickname"
-            value={nickname}
-            onChange={this.handleChange}
-            placeholder={"My Username"}
-          />
-          <div className="error"> {this.state.error}</div>
-          <button className="btn btn-primary col-1 col-mr-auto" onClick={this.handleSubmit}>
-            Submit
-          </button>
-        </form>
+      <div className="h1Styles columns chat-login-holder">
+        <div className="column is-one-fifth" />
+        <div className="column is-three-fifths">
+          <form className="chatlogin">
+            <label htmlFor="nickname" style={{ margin: "20px" }}>
+              <h2 className="nickname-h2">Enter your name to chat:</h2>
+            </label>
+            <input
+              ref={input => {
+                this.textInput = input;
+              }}
+              type="text"
+              id="nickname"
+              value={nickname}
+              onChange={this.handleChange}
+              placeholder={"My Username"}
+            />
+            <div className="error"> {this.state.error}</div>
+            <button
+              className="btn col-1 col-mr-auto login-submit"
+              onClick={this.handleSubmit}
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <div className="column is-one-fifth" />
       </div>
     );
   }

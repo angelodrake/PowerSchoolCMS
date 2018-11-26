@@ -98,6 +98,8 @@ class App extends Component {
               path="/forms"
               render={() => <Forms loggedIn={this.state.loggedIn} />}
             />
+            <Route path="/chat" render={() => <Chat title="Chat" />} />
+
             <Route
               exact
               path="/attendance"
@@ -223,6 +225,7 @@ class App extends Component {
               render={() => <Grades loggedIn={this.state.loggedIn} />}
             />
           </div>
+
           <div className="sidebar">
             <SideBar
               loggedIn={this.state.loggedIn}
@@ -237,7 +240,6 @@ class App extends Component {
             render={() => <LoginForm updateUser={this.updateUser} />}
           />
           <Route path="/signup" render={() => <Signup />} />
-          <Route path="/chat" render={() => <Chat title="Chat App Screen" />} />
         </div>
       </div>
     );
