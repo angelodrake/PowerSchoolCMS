@@ -60,3 +60,7 @@
 #logout-navbar-link:hover {
   color: rgb(150, 192, 232);
 }
+
+#app-title:hover {
+  color: rgb(150, 192, 232);
+}
