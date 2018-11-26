@@ -51,7 +51,7 @@ app.post("/getMessage", (req, res) => {
 app.use("/api", apiRoute);
 app.use("/user", userAPI);
 app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 server.listen(PORT, function() {
