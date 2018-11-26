@@ -62,7 +62,6 @@ export default class Forms extends React.Component {
               <Column size="is-one-fifth" />
 
               <Column size="is-three-fifths formsBuffer">
-
                 {this.state.forms.map(forms => (
                   <div className="formsContainer">
                     <div className="innerContainer">
@@ -85,9 +84,9 @@ export default class Forms extends React.Component {
                             View Form
                           </button>
                         </div>
-                        
-                          <div className="separator" />
-                        
+
+                        <div className="separator" />
+
                         <div className="col col-lg-5">
                           {!forms.isRead ? (
                             <span
@@ -98,20 +97,22 @@ export default class Forms extends React.Component {
                               Mark as Read
                             </span>
                           ) : (
-                              <span className="greenboldSpan" style={{ color: "green" }}>
-                                <i
-                                  className="fa fa-check-square"
-                                  aria-hidden="true"
-                                  style={{ marginRight: 1 + "em" }}
-                                />
-                                Marked as Read
-                          </span>
-                            )}
+                            <span
+                              className="greenboldSpan"
+                              style={{ color: "green" }}
+                            >
+                              <i
+                                className="fa fa-check-square"
+                                aria-hidden="true"
+                                style={{ marginRight: 1 + "em" }}
+                              />
+                              Read
+                            </span>
+                          )}
                         </div>
                       </div>
                     </div>
                   </div>
-
                 ))}
 
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
@@ -130,11 +131,11 @@ export default class Forms extends React.Component {
             </Columns>
           </div>
         ) : (
-            <div>
-              {console.log(loggedIn)}
-              <Redirect to={{ pathname: this.state.redirectTo }} />
-            </div>
-          )}
+          <div>
+            {console.log(loggedIn)}
+            <Redirect to={{ pathname: this.state.redirectTo }} />
+          </div>
+        )}
       </div>
     );
   }

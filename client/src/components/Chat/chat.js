@@ -5,12 +5,12 @@ import { USER_CONNECTED, LOGOUT } from "./Events";
 import ChatLogin from "./ChatLogin";
 import ChatContainer from "./chats/ChatContainer";
 
-let socketUrl = ""
+let socketUrl = "";
 
 if (process.env.NODE_ENV === "production") {
   socketUrl = window.location.hostname;
 } else {
-  socketUrl = "http://localhost:3001"
+  socketUrl = "http://localhost:3001";
 }
 
 class Chat extends Component {
@@ -53,8 +53,12 @@ class Chat extends Component {
 
     return (
       <div>
-        <h1 className="h1Styles">{title}</h1>
-        {!user ? <ChatLogin socket={socket} setUser={this.setUser} /> : <ChatContainer socket={socket} user={user} logout={this.logout} />}
+        <h1 className="h1Styles has-text-centered">{title} with Support</h1>
+        {!user ? (
+          <ChatLogin socket={socket} setUser={this.setUser} />
+        ) : (
+          <ChatContainer socket={socket} user={user} logout={this.logout} />
+        )}
       </div>
     );
   }
