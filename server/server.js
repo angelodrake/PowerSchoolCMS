@@ -47,7 +47,7 @@ app.post("/getMessage", (req, res) => {
   io.emit("sendMessage", req.body);
   res.status(200).send("success");
 });
-
+//
 app.use("/api", apiRoute);
 app.use("/user", userAPI);
 app.get("*", function(req, res) {
