@@ -52,14 +52,18 @@ img {
   }
 }
 
-.col{
-  text-align: center
+.col {
+  text-align: center;
 }
 
-.greenboldSpan{
+.greenboldSpan {
   font-size: 18px;
 }
 
-.modal-body{
+.modal-body {
   text-align: center;
+}
+
+.signed-holder {
+  margin-top: 6px;
 }

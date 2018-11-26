@@ -2,7 +2,7 @@
   {
     "id": 1,
     "courseName": "Math 3",
-    "subject":"math",
+    "subject": "math",
     "assignmentName": "Sequence and of convergence of a sequence",
     "date": "13th August 2018",
     "score": 90,
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "courseName": "Math 3",
-    "subject":"math",
+    "subject": "math",
     "assignmentName": "Rolle’s theorem and the Mean-Value theorem",
     "date": "13th September 2018",
     "score": 80,
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "courseName": "Math 3",
-    "subject":"math",
+    "subject": "math",
     "assignmentName": "L’Hospital’s rule and the Inverse-Function theorem",
     "date": "13th October 2018",
     "score": 100,
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "courseName": "Math 3",
-    "subject":"math",
+    "subject": "math",
     "assignmentName": "First Mid-term exam",
     "date": "13th November 2018",
     "score": 50,
@@ -38,7 +38,7 @@
   {
     "id": 5,
     "courseName": "English 3",
-    "subject":"english",
+    "subject": "english",
     "assignmentName": "Twelfth Night – William Shakespeare",
     "date": "10th August 2018",
     "score": 70,
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "courseName": "English 3",
-    "subject":"english",
+    "subject": "english",
     "assignmentName": "A View from the Bridge – Arthur Miller",
     "date": "10th September 2018",
     "score": 70,
@@ -56,7 +56,7 @@
   {
     "id": 7,
     "courseName": "English 3",
-    "subject":"english",
+    "subject": "english",
     "assignmentName": "Introduction to Alphabet",
     "date": "17th November 2018",
     "score": 70,
@@ -65,7 +65,7 @@
   {
     "id": 8,
     "courseName": "English 3",
-    "subject":"english",
+    "subject": "english",
     "assignmentName": "The Play of Kes by Barry Hines & Allan Stronach (Heinemann Plays)",
     "date": "17th November 2018",
     "score": 70,
@@ -74,7 +74,7 @@
   {
     "id": 9,
     "courseName": "Biology",
-    "subject":"biology",
+    "subject": "biology",
     "assignmentName": "Mechanisms of Genetic Recombination",
     "date": "17th August 2018",
     "score": 100,
@@ -83,7 +83,7 @@
   {
     "id": 10,
     "courseName": "Biology",
-    "subject":"biology",
+    "subject": "biology",
     "assignmentName": "Neurophysiology",
     "date": "17th September 2018",
     "score": 100,
@@ -92,7 +92,7 @@
   {
     "id": 11,
     "courseName": "Biology",
-    "subject":"biology",
+    "subject": "biology",
     "assignmentName": "Immunology-I",
     "date": "17th October 2018",
     "score": 90,
@@ -101,7 +101,7 @@
   {
     "id": 12,
     "courseName": "Biology",
-    "subject":"biology",
+    "subject": "biology",
     "assignmentName": "Human Gross Anatomy",
     "date": "17th November 2018",
     "score": 90,
@@ -110,34 +110,34 @@
   {
     "id": 13,
     "courseName": "Geography",
-    "subject":"geography",
+    "subject": "geography",
     "assignmentName": "Introduction to Economic Geography",
     "date": "16th August 2018",
-    "score": 30,
+    "score": 80,
     "category": "Informal"
   },
   {
     "id": 14,
     "courseName": "Geography",
-    "subject":"geography",
+    "subject": "geography",
     "assignmentName": "Geography of North Carolina",
     "date": "16th October 2018",
-    "score": 30,
+    "score": 90,
     "category": "Informal"
   },
   {
     "id": 15,
     "courseName": "Geography",
-    "subject":"geography",
+    "subject": "geography",
     "assignmentName": "Mid-term Exam",
     "date": "16th November 2018",
-    "score": 20,
+    "score": 100,
     "category": "Formal"
   },
   {
     "id": 16,
     "courseName": "Geography",
-    "subject":"geography",
+    "subject": "geography",
     "assignmentName": "Field Trip",
     "date": "22nd November 2018",
     "score": 0,

@@ -76,10 +76,16 @@ class Calendar extends Component {
                 <div className="calendar viewing" id="calendar-nov">
                   <div className="calendar-month">
                     <ul className="month-nav">
-                      <li className="prev month-toggler" onClick={this.monthToggler}>
+                      <li
+                        className="prev month-toggler"
+                        onClick={this.monthToggler}
+                      >
                         &#10094;
                       </li>
-                      <li className="next month-toggler" onClick={this.monthToggler}>
+                      <li
+                        className="next month-toggler"
+                        onClick={this.monthToggler}
+                      >
                         &#10095;
                       </li>
                       <li>
@@ -115,26 +121,38 @@ class Calendar extends Component {
                     </li>
                     <li>1</li>
                     <li>
-                      <span className="underlined" data-events="Football vs East Meck">
+                      <span
+                        className="underlined"
+                        data-events="Football vs East Meck"
+                      >
                         2
                       </span>
                     </li>
                     <li>3</li>
                     <li>4</li>
                     <li>
-                      <span className="underlined" data-events="Biology Test Genetics, Girls Basketball vs West Charlotte">
+                      <span
+                        className="underlined"
+                        data-events="Biology Test Genetics, Girls Basketball vs West Charlotte"
+                      >
                         5
                       </span>
                     </li>
                     <li>
-                      <span className="underlined" data-events="Math 3 Polynomials Test, Boys Basketball vs Hough">
+                      <span
+                        className="underlined"
+                        data-events="Math 3 Polynomials Test, Boys Basketball vs Hough"
+                      >
                         6
                       </span>
                     </li>
                     <li>7</li>
                     <li>8</li>
                     <li>
-                      <span className="underlined" data-events="Geography Project Due, Boys Basketball vs West Mecklenburg, Football vs West Charlotte">
+                      <span
+                        className="underlined"
+                        data-events="Geography Project Due, Boys Basketball vs West Mecklenburg, Football vs West Charlotte"
+                      >
                         9
                       </span>
                     </li>
@@ -142,18 +160,27 @@ class Calendar extends Component {
                     <li>11</li>
                     <li>12</li>
                     <li>
-                      <span className="underlined" data-events="English 3 Test on 1984">
+                      <span
+                        className="underlined"
+                        data-events="English 3 Test on 1984"
+                      >
                         13
                       </span>
                     </li>
                     <li>14</li>
                     <li>
-                      <span className="underlined" data-events="Geography of Africa Test">
+                      <span
+                        className="underlined"
+                        data-events="Geography of Africa Test"
+                      >
                         15
                       </span>
                     </li>
                     <li>
-                      <span className="underlined" data-events="Football Away vs Ardrey Kell">
+                      <span
+                        className="underlined"
+                        data-events="Football Away vs Ardrey Kell"
+                      >
                         16
                       </span>
                     </li>
@@ -163,12 +190,18 @@ class Calendar extends Component {
                     <li>20</li>
                     <li>21</li>
                     <li>
-                      <span className="underlined Math" data-events="Math 3 Logarithms Test">
+                      <span
+                        className="underlined Math"
+                        data-events="Math 3 Logarithms Test"
+                      >
                         22
                       </span>
                     </li>
                     <li>
-                      <span className="underlined" data-events="Football vs Butler, Biology Evolution Exam">
+                      <span
+                        className="underlined"
+                        data-events="Football vs Butler, Biology Evolution Exam"
+                      >
                         23
                       </span>
                     </li>
@@ -176,22 +209,34 @@ class Calendar extends Component {
                     <li>25</li>
                     <li>26</li>
                     <li>
-                      <span className="active underlined events-showing" data-events="English Project Due, Girls Basketball vs South Mecklenburg">
+                      <span
+                        className="active underlined events-showing"
+                        data-events="English Project Due, Girls Basketball vs South Mecklenburg"
+                      >
                         27
                       </span>
                     </li>
                     <li>
-                      <span className="underlined" data-events="Thanksgiving Break">
+                      <span
+                        className="underlined"
+                        data-events="Thanksgiving Break"
+                      >
                         28
                       </span>
                     </li>
                     <li>
-                      <span className="underlined" data-events="Thanksgiving Break">
+                      <span
+                        className="underlined"
+                        data-events="Thanksgiving Break"
+                      >
                         29
                       </span>
                     </li>
                     <li>
-                      <span className="underlined" data-events="Thanksgiving Break">
+                      <span
+                        className="underlined"
+                        data-events="Thanksgiving Break"
+                      >
                         30
                       </span>
                     </li>
@@ -203,10 +248,16 @@ class Calendar extends Component {
                 <div className="calendar not-viewing" id="calendar-dec">
                   <div className="calendar-month">
                     <ul className="month-nav">
-                      <li className="prev month-toggler" onClick={this.monthToggler}>
+                      <li
+                        className="prev month-toggler"
+                        onClick={this.monthToggler}
+                      >
                         &#10094;
                       </li>
-                      <li className="next month-toggler" onClick={this.monthToggler}>
+                      <li
+                        className="next month-toggler"
+                        onClick={this.monthToggler}
+                      >
                         &#10095;
                       </li>
                       <li>
@@ -252,12 +303,18 @@ class Calendar extends Component {
                     <li>4</li>
                     <li>5</li>
                     <li>
-                      <span className="underlined" data-events="Math 3 Trigonometry Test">
+                      <span
+                        className="underlined"
+                        data-events="Math 3 Trigonometry Test"
+                      >
                         6
                       </span>
                     </li>
                     <li>
-                      <span className="underlined" data-events="Biology Cells Test">
+                      <span
+                        className="underlined"
+                        data-events="Biology Cells Test"
+                      >
                         7
                       </span>
                     </li>
@@ -265,14 +322,20 @@ class Calendar extends Component {
                     <li>9</li>
                     <li>10</li>
                     <li>
-                      <span className="underlined" data-events="English 3 Research Paper Due">
+                      <span
+                        className="underlined"
+                        data-events="English 3 Research Paper Due"
+                      >
                         11
                       </span>
                     </li>
                     <li>12</li>
                     <li>13</li>
                     <li>
-                      <span className="underlined" data-events="Geography of Europe Test, Girls Baskebtball vs Providence">
+                      <span
+                        className="underlined"
+                        data-events="Geography of Europe Test, Girls Baskebtball vs Providence"
+                      >
                         14
                       </span>
                     </li>
@@ -281,17 +344,26 @@ class Calendar extends Component {
                     <li>17</li>
                     <li>18</li>
                     <li>
-                      <span className="underlined" data-events="Winter Break, Boys Basketball Tournament">
+                      <span
+                        className="underlined"
+                        data-events="Winter Break, Boys Basketball Tournament"
+                      >
                         19
                       </span>
                     </li>
                     <li>
-                      <span className="underlined" data-events="Winter Break, Boys Basketball Tournament">
+                      <span
+                        className="underlined"
+                        data-events="Winter Break, Boys Basketball Tournament"
+                      >
                         20
                       </span>
                     </li>
                     <li>
-                      <span className="underlined" data-events="Winter Break, Boys Basketball Tournament">
+                      <span
+                        className="underlined"
+                        data-events="Winter Break, Boys Basketball Tournament"
+                      >
                         21
                       </span>
                     </li>
@@ -347,11 +419,12 @@ class Calendar extends Component {
                 <div className="card days-events-card">
                   <header className="card-header days-events-card-header">
                     <p className="days-events-date card-header-title">
-                      Events for &nbsp; <span id="events-month-span"> 11</span>/<span id="events-day-span">27</span>/18
+                      Events for &nbsp; <span id="events-month-span"> 11</span>/
+                      <span id="events-day-span">27</span>/18
                     </p>
                   </header>
                   <hr className="days-events-card-hr" />
-                  <div className="card-content">
+                  <div className="card-content events-card-bottom">
                     <div className="days-events-holder">
                       <ul id="events-list">
                         <li>Biology Project Presentation</li>

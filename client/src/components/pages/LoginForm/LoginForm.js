@@ -4,8 +4,8 @@ import axios from "axios";
 import Column from "../../Grid/Column";
 import Columns from "../../Grid/Columns";
 import "./LoginForm.css";
-import Particles from 'react-particles-js';
-import {Card} from 'reactstrap'
+import Particles from "react-particles-js";
+import { Card } from "reactstrap";
 
 class LoginForm extends Component {
   constructor(props) {
@@ -62,120 +62,120 @@ class LoginForm extends Component {
       return <Redirect to={{ pathname: this.state.redirectTo }} />;
     } else {
       return (
-        <div className='login'>
-          <div id='particles'>
+        <div className="login">
+          <div id="particles">
             <Particles
-            
               params={{
-                "particles": {
-                  "number": {
-                    "value": 100,
-                    "density": {
-                      "enable": true,
-                      "value_area": 868.0624057955
+                particles: {
+                  number: {
+                    value: 100,
+                    density: {
+                      enable: true,
+                      value_area: 868.0624057955
                     }
                   },
-                  "color": {
-                    "value": "#ffffff"
+                  color: {
+                    value: "#ffffff"
                   },
-                  "shape": {
-                    "type": "circle",
-                    "stroke": {
-                      "width": 0,
-                      "color": "#000000"
+                  shape: {
+                    type: "circle",
+                    stroke: {
+                      width: 0,
+                      color: "#000000"
                     },
-                    "polygon": {
-                      "nb_sides": 5
+                    polygon: {
+                      nb_sides: 5
                     }
                   },
-                  "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                      "enable": false,
-                      "speed": 1,
-                      "opacity_min": 0.1,
-                      "sync": false
+                  opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                      enable: false,
+                      speed: 1,
+                      opacity_min: 0.1,
+                      sync: false
                     }
                   },
-                  "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                      "enable": false,
-                      "speed": 40,
-                      "size_min": 0.1,
-                      "sync": false
+                  size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                      enable: false,
+                      speed: 40,
+                      size_min: 0.1,
+                      sync: false
                     }
                   },
-                  "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
+                  line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
                   },
-                  "move": {
-                    "enable": true,
-                    "speed": 6,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                      "enable": false,
-                      "rotateX": 600,
-                      "rotateY": 1200
+                  move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                      enable: false,
+                      rotateX: 600,
+                      rotateY: 1200
                     }
                   }
                 },
-                "interactivity": {
-                  "detect_on": "canvas",
-                  "events": {
-                    "onhover": {
-                      "enable": true,
-                      "mode": "repulse"
+                interactivity: {
+                  detect_on: "canvas",
+                  events: {
+                    onhover: {
+                      enable: true,
+                      mode: "repulse"
                     },
-                    "onclick": {
-                      "enable": true,
-                      "mode": "push"
+                    onclick: {
+                      enable: false,
+                      mode: "push"
                     },
-                    "resize": true
+                    resize: true
                   },
-                  "modes": {
-                    "grab": {
-                      "distance": 400,
-                      "line_linked": {
-                        "opacity": 1
+                  modes: {
+                    grab: {
+                      distance: 400,
+                      line_linked: {
+                        opacity: 1
                       }
                     },
-                    "bubble": {
-                      "distance": 400,
-                      "size": 40,
-                      "duration": 2,
-                      "opacity": 8,
-                      "speed": 3
+                    bubble: {
+                      distance: 400,
+                      size: 40,
+                      duration: 2,
+                      opacity: 8,
+                      speed: 3
                     },
-                    "repulse": {
-                      "distance": 200,
-                      "duration": 0.4
+                    repulse: {
+                      distance: 200,
+                      duration: 0.4
                     },
-                    "push": {
-                      "particles_nb": 4
+                    push: {
+                      particles_nb: 4
                     },
-                    "remove": {
-                      "particles_nb": 2
+                    remove: {
+                      particles_nb: 2
                     }
                   }
                 },
-                "retina_detect": true
-              }} />
-         </div>
+                retina_detect: true
+              }}
+            />
+          </div>
           <Card className="loginFormBuffer">
             <div className="has-text-centered loginTitle">
               Login to PowerSchool
-              </div>
+            </div>
             <div className="loginFormBuffer-body">
               <div className="field">
                 <p className="control">
@@ -210,12 +210,12 @@ class LoginForm extends Component {
                     <p className="control">
                       <button onClick={this.handleSubmit} className="button">
                         Login
-                        </button>
+                      </button>
                     </p>
                     <p className="control">
                       <Link to="/signup" className="button is-light">
                         Sign-up
-                        </Link>
+                      </Link>
                     </p>
                   </div>
                 </p>

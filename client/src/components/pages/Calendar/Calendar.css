@@ -126,7 +126,7 @@
 .viewing {
   border-radius: 25px;
   overflow: hidden;
-  box-shadow: 10px 10px 5px rgb(2, 17, 43);
+  box-shadow: 10px 10px 5px #ccc;
 }
 
 .underlined:hover {
@@ -140,4 +140,9 @@
 
 .events-showing {
   background-color: #ddd;
+}
+
+.events-card-bottom {
+  background-color: rgb(150, 192, 232);
+  color: rgb(3, 33, 83);
 }

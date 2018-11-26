@@ -83,17 +83,22 @@ class ChatContainer extends Component {
               }}
             />
             <br />
-            <button onClick={this.send.bind(this)} className="btn">
-              Send
-            </button>
-            <br />
-            <br />
-            <button
-              className="chat-logout-button btn"
-              onClick={this.props.logout}
-            >
-              Logout
-            </button>
+            <div className="level">
+              <div className="level-left">
+                <button onClick={this.send.bind(this)} className="btn">
+                  Send
+                </button>
+              </div>
+              <div className="level-right">
+                <button
+                  className="btn"
+                  onClick={this.props.logout}
+                  id="btn-chat-logout"
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <div className="column is-one-fifth" />
