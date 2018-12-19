@@ -9,26 +9,14 @@ module.exports = {
       .then(dbForm => res.json(dbForm))
       .catch(err => res.status(422).json(err));
   },
-  findById: function(req, res) {
-    db.Form
-      .findById(req.params.id)
-      .then(Form => res.json(Form))
-      .catch(err => res.status(422).json(err));
-  },
-  //update form under target id
-  update: function(req, res) {
-    db.Form
-      .findOneAndUpdate({_id: req.params.id }, req.body)
-      .then(Form => res.json(Form))
-      .catch(err => res.status(422).json(err));
-  },
-  //POSTMAN ROUTES
+  // user id relating routes
+  
   // create form under target id
   create: function(req, res) {
     db.Form
       .create(req.body)
       .then(function (dbCoursework) {
-        return db.User.findOneAndUpdate({ _id: req.params.id }, { $push: { form: dbCoursework._id } }, { new: false });
+        return db.User.findOneAndUpdate({ _id: req.params.uid }, { $push: { form: dbCoursework._id } }, { new: false });
       })
       .then(function (dbStudent) {
         res.json(dbStudent);
@@ -37,11 +25,25 @@ module.exports = {
         res.json(err);
       });
   },
-  // delete form under target id
+  // find by form id
+  findById: function(req, res) {
+    db.Form
+      .findById(req.params.id)
+      .then(Form => res.json(Form))
+      .catch(err => res.status(422).json(err));
+  },
+  // delete form under form id
   remove: function(req, res) {
     db.Form
       .findById({ _id: req.params.id })
       .then(Form => Form.remove())
+      .then(Form => res.json(Form))
+      .catch(err => res.status(422).json(err));
+  },
+  //update form under form id
+  update: function(req, res) {
+    db.Form
+      .findOneAndUpdate({_id: req.params.id }, req.body)
       .then(Form => res.json(Form))
       .catch(err => res.status(422).json(err));
   }

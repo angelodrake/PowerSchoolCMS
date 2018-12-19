@@ -7,6 +7,13 @@ import "./LoginForm.css";
 import Particles from "react-particles-js";
 import { Card } from "reactstrap";
 
+
+export class NonUpdatingParticles extends Particles {
+  shouldComponentUpdate(nextProps) {
+    return false;
+  }
+}
+
 class LoginForm extends Component {
   constructor(props) {
     super(props);
